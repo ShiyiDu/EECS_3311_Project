@@ -8,21 +8,6 @@ class
 	UNARY_OP
 inherit EXPRESSION
 
-create
-	make
-
-feature
-	symbol: CHARACTER
-	exp: EXPRESSION
-
-feature
-	make(s: CHARACTER; e: EXPRESSION)
-	require
-		s ~ '!' or s ~ '-'
-	do
-		symbol := s
-		exp := e
-	end
 
 feature
 	accept(v: VISITOR)
