@@ -8,8 +8,16 @@ class
 	BOOL_CONST
 inherit EXPRESSION
 
+create make
+
 feature
 	value: BOOLEAN
+
+feature
+	make(b: BOOLEAN)
+	do
+		value := b
+	end
 
 feature
 	accept(v: VISITOR)
