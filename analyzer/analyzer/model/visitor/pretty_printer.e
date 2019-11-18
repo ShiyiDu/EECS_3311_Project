@@ -56,7 +56,7 @@ feature
 		until
 			i > c.upper
 		loop
-			print_result := print_result + c[i]
+			print_result := print_result + (if i /= 1 then "." end) + c[i]
 		end
 
 	end
@@ -65,7 +65,7 @@ feature
 	-- deferred
 
 	do
-		print_result := binary_operation(a, in)
+		print_result := binary_operation(a, "+")
 
 	end
 ----------------------------------------------------------------------------------------
@@ -73,37 +73,37 @@ feature
 	visit_substraction(s: BINARY_SUB)
 
 	do
-		binary_operation(s, in)
+		binary_operation(s, "-")
 	end
 --------------------------------------------------------------------------------------
 	visit_multiplication(m: BINARY_MULT)
 	do
-		binary_operation(m, in)
+		binary_operation(m, "*")
 	end
 
 	visit_division(d: BINARY_DIV)
 	do
-		binary_operation(d, in)
+		binary_operation(d, "/")
 	end
 
 	visit_equal(e: BINARY_EQUAL)
 	do
-		binary_operation(e, in)
+		binary_operation(e, "==")
 	end
 
 	visit_modulo(m: BINARY_MOD)
 	do
-		binary_operation(m, in)
+		binary_operation(m, "%")
 	end
 
 	visit_greater(m: BINARY_GREATER)
 	do
-		binary_operation(m, in)
+		binary_operation(m, ">")
 	end
 
 	visit_smaller(s: BINARY_SMALLER)
 	do
-		binary_operation(s, in)
+		binary_operation(s, "<")
 	end
 
 feature {NONE}-- query
