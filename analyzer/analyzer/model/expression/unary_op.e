@@ -8,12 +8,6 @@ class
 	UNARY_OP
 inherit EXPRESSION
 
-feature
-	make(l: EXPRESSION, r: EXPRESSION)
-	do
-		left := l
-		right := r
-	end
 
 feature
 	accept(v: VISITOR)
