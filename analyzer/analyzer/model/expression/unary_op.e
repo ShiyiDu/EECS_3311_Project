@@ -8,4 +8,9 @@ class
 	UNARY_OP
 inherit EXPRESSION
 
+feature
+	accept(v: VISITOR)
+	do
+		--todo
+	end
 end

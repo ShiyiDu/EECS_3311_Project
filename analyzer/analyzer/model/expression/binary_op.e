@@ -8,4 +8,8 @@ deferred class
 	BINARY_OP
 inherit EXPRESSION
 
+feature
+	accept(v: VISITOR)
+		deferred
+	end
 end

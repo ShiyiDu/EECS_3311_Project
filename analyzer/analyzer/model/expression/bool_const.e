@@ -7,5 +7,8 @@ note
 class
 	BOOL_CONST
 inherit EXPRESSION
-
+	accept(v: VISITOR)
+	do
+		--todo
+	end
 end
