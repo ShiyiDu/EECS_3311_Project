@@ -23,13 +23,28 @@ feature
 	do
 		print_result := print_result + i.value
 	end
-
+--------------------------------------------------------
 	visit_bool(b: BOOL_CONST)
 	do
 		print_result := print_result + b.value
 
 	end
+---------------------- changes ------------------------------------	
+	visit_and(a: BINARY_AND)
+	do
+		binary_operation(d, "&&")
+	end
 
+	visit_equals_to(e: BINARY_EQUALS_TO)
+	do
+		binary_operation(d, "==")
+	end
+
+	visit_or(o: BINARY_OR)
+	do
+		binary_operation(d, "||")
+	end
+--------------------------------------------------------
 	visit_unary_op(u: UNARY_OP)
 	-- deferred
 	-- Handling the expressions

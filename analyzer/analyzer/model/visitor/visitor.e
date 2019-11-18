@@ -54,6 +54,18 @@ feature
 	visit_smaller(s: BINARY_SMALLER)
 	deferred
 	end
+------------------------------------- changes-------------------------------------------
+	visit_and(a: BINARY_AND)
+	deferred
+	end
 
+	visit_equals_to(e: BINARY_EQUALS_TO)
+	deferred
+	end
+
+	visit_or(o: BINARY_OR)
+	deferred
+	end
+-------------------------------------------------------------------------------------------
 
 end

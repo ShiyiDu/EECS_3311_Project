@@ -81,7 +81,22 @@ feature
 	do
 		visit_binary(m)
 	end
+----------------------------------------- changes --------------------------------------	
+	visit_and(a: BINARY_AND)
+	do
+		visit_logical(a)
+	end
 
+	visit_or(o: BINARY_OR)
+	do
+		visit_logical(o)
+	end
+
+	visit_equals_to(e: BINARY_EQUALS_TO)
+	do
+		visit_logical(e)
+	end
+---------------------------------------------------------------------------------------------
 	visit_greater(g: BINARY_GREATER)
 	do
 		visit_binary(g)
@@ -105,6 +120,24 @@ feature {NONE} --helper method
 		a.right.accept(right)
 
 		value := left.type ~ right.type
+
+------------------------------ changes (not sure) ----------------------------------------
+		-- value := (left.type ~ "int") and (right.type ~ "int")
+-------------------------------------------------------------------------------
 	end
+
+-------------------------------- changes (not sure)----------------------------------	
+	visit_logical(a: BINARY_OP)
+	local
+		left, right: TYPE_CHECKER
+	do
+		create {TYPE_CHECKER} left.make
+		create {TYPE_CHECKER} right.make
+		a.left.accept(left)
+		a.right.accept(right)
+	    value := (left.type ~ "boolean") and (right.type ~ "boolean")
+	end
+
+-------------------------------------------------------------------------------------	
 
 end
