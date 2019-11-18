@@ -4,9 +4,19 @@ note
 	date: "$Date$"
 	revision: "$Revision$"
 
-deferred class
+class
 	BINARY_OP
 inherit EXPRESSION COMPOSITE
+
+create
+	make
+
+feature
+	make(l: EXPRESSION, r: EXPRESSION)
+	do
+		left := l
+		right := r
+	end
 
 feature
 	accept(v: VISITOR)
