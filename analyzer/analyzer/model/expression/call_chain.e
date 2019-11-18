@@ -11,5 +11,6 @@ feature
 	accept(v: VISITOR)
 	do
 		--todo
+		v.visit_call_chain(Current)
 	end
 end

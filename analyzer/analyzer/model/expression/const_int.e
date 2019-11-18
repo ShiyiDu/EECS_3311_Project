@@ -10,5 +10,6 @@ inherit EXPRESSION
 	accept(v: VISITOR)
 	do
 		--todo
+		v.visit_int(Current)
 	end
 end

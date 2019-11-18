@@ -11,7 +11,7 @@ feature
 	deferred
 	end
 
-	visit_bool(b: CONST_BOOL)
+	visit_bool(b: BOOL_CONST)
 	deferred
 	end
 
