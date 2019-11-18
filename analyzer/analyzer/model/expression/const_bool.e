@@ -7,8 +7,13 @@ note
 class
 	BOOL_CONST
 inherit EXPRESSION
+
+feature
+	value: BOOLEAN
+
+feature
 	accept(v: VISITOR)
 	do
-		--todo
+		v.visit_bool(current)
 	end
 end

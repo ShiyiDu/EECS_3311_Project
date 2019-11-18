@@ -9,4 +9,10 @@ class
 
 inherit BINARY_OP
 
+feature
+	accept(v: VISITOR)
+	do
+		v.visit_sub(current)
+	end
+
 end
