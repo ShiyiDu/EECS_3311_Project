@@ -47,7 +47,7 @@ feature
 	deferred
 	end
 
-	visit_greater(m: BINARY_GREATER)
+	visit_greater(g: BINARY_GREATER)
 	deferred
 	end
 
