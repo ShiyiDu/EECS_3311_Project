@@ -12,5 +12,6 @@ feature
 	accept(v: VISITOR)
 	do
 		--todo
+		v.visit_unary_op(Current)
 	end
 end
