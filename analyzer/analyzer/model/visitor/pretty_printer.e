@@ -52,11 +52,12 @@ feature
 --	end
 	do
 		from
-			i = 1
+			i := 1
 		until
 			i > c.upper
 		loop
 			print_result := print_result + (if i /= 1 then "." end) + c[i]
+			i := i + 1
 		end
 
 	end
