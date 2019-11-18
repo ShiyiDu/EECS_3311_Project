@@ -39,11 +39,11 @@ feature
 	deferred
 	end
 
-	visit_equal(e: BINARY_EQUAL)
+	visit_modulo(m: BINARY_MOD)
 	deferred
 	end
 
-	visit_modulo(m: BINARY_MOD)
+	visit_equal(e: BINARY_EQUAL)
 	deferred
 	end
 
@@ -56,10 +56,6 @@ feature
 	end
 ------------------------------------- changes-------------------------------------------
 	visit_and(a: BINARY_AND)
-	deferred
-	end
-
-	visit_equals_to(e: BINARY_EQUALS_TO)
 	deferred
 	end
 
