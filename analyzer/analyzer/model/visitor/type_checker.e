@@ -25,22 +25,31 @@ feature
 	visit_int(i: INT_CONST)
 	do
 		value := true
+		type := "int"
 	end
 
 	visit_bool(b: BOOL_CONST)
 	do
 		value := true
+		type := "bool"
 	end
 
 	visit_unary_op(u: UNARY_OP)
+	local
+		checker: TYPE_CHECKER
 	do
 		--todo: maybe expression must be a boolean value??
 		value := true
+		create checker.make
+
+		u.exp.accept(checker)
+		type := checker.type
 	end
 
 	visit_call_chain(c: CALL_CHAIN)
 	do
 		value := true
+		--todo: you need to find if there is an attribute in the class fields
 	end
 
 	visit_addition(a: BINARY_ADD)
@@ -84,6 +93,8 @@ feature
 	end
 
 feature {NONE} --helper method
+	type: STRING --int, boolean, void, name
+
 	visit_binary(a:BINARY_OP)
 	local
 		left, right: TYPE_CHECKER
@@ -93,7 +104,7 @@ feature {NONE} --helper method
 		a.left.accept(left)
 		a.right.accept(right)
 
-		value := left.value and right.value
+		value := left.type ~ right.type
 	end
 
 end
