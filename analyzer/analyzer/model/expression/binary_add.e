@@ -1,11 +1,11 @@
 note
-	description: "Summary description for {ADDITION}."
+	description: "Summary description for {BINARY_ADD}."
 	author: ""
 	date: "$Date$"
 	revision: "$Revision$"
 
 class
-	ADDITION
+	BINARY_ADD
 inherit BINARY_OP
 
 end
