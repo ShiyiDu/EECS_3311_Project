@@ -7,4 +7,6 @@ note
 class
 	BINARY_DIV
 
+inherit BINARY_OP
+
 end

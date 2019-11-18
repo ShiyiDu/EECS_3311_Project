@@ -7,4 +7,6 @@ note
 class
 	BINARY_SUB
 
+inherit BINARY_OP
+
 end

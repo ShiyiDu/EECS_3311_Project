@@ -11,12 +11,23 @@ feature
 	deferred
 	end
 
+	visit_bool(b: CONST_BOOL)
+	deferred
+	end
+
 	visit_addition(a: BINARY_ADD)
 	deferred
 	end
 
-	visit_substraction(a: BINARY_ADD)
+	visit_substraction(s: BINARY_SUB)
 	deferred
 	end
 
+	visit_multiplication(m: BINARY_MULT)
+	deferred
+	end
+
+	visit_division(d: BINARY_DIV)
+	deferred
+	end
 end

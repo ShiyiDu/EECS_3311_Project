@@ -6,6 +6,7 @@ note
 
 class
 	BINARY_ADD
+
 inherit BINARY_OP
 
 end

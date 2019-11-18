@@ -6,7 +6,7 @@ note
 
 deferred class
 	BINARY_OP
-inherit EXPRESSION
+inherit EXPRESSION COMPOSITE
 
 feature
 	accept(v: VISITOR)

@@ -7,4 +7,6 @@ note
 class
 	BINARY_MULT
 
+inherit BINARY_OP
+
 end
