@@ -15,6 +15,14 @@ feature
 	deferred
 	end
 
+	visit_unary_op(u: UNARY_OP)
+	deferred
+	end
+
+	visit_call_chain(c: CALL_CHAIN)
+	deferred
+	end
+
 	visit_addition(a: BINARY_ADD)
 	deferred
 	end
@@ -30,4 +38,9 @@ feature
 	visit_division(d: BINARY_DIV)
 	deferred
 	end
+
+	visit_modulo(m: BINARY_MOD)
+	deferred
+	end
+
 end
