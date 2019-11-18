@@ -7,7 +7,7 @@ note
 deferred class
 	VISITOR
 feature
-	visit_int(i: CONST_INT)
+	visit_int(i: INT_CONST)
 	deferred
 	end
 
@@ -39,7 +39,19 @@ feature
 	deferred
 	end
 
+	visit_equal(e: BINARY_EQUAL)
+	deferred
+	end
+
 	visit_modulo(m: BINARY_MOD)
+	deferred
+	end
+
+	visit_greater(m: BINARY_GREATER)
+	deferred
+	end
+
+	visit_smaller(s: BINARY_SMALLER)
 	deferred
 	end
 

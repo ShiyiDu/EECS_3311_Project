@@ -5,14 +5,17 @@ note
 	revision: "$Revision$"
 
 class
-	BINARY_DIV
+	BINARY_MOD
 
 inherit BINARY_OP
+
+create
+	make
 
 feature
 	accept(v: VISITOR)
 	do
-		v.visit_mod(current)
+		v.visit_modulo(current)
 	end
 
 end

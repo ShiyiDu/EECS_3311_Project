@@ -7,6 +7,8 @@ note
 class
 	INT_CONST
 inherit EXPRESSION
+
+feature
 	accept(v: VISITOR)
 	do
 		--todo

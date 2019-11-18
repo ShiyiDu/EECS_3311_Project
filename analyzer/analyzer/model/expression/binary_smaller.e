@@ -1,11 +1,11 @@
 note
-	description: "Summary description for {BINARY_MULT}."
+	description: "Summary description for {BINARY_SMALLER}."
 	author: ""
 	date: "$Date$"
 	revision: "$Revision$"
 
 class
-	BINARY_MULT
+	BINARY_SMALLER
 
 inherit BINARY_OP
 
@@ -15,7 +15,7 @@ create
 feature
 	accept(v: VISITOR)
 	do
-		v.visit_multiplication(current)
+		v.visit_smaller(current)
 	end
 
 end

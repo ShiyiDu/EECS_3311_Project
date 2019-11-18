@@ -9,10 +9,13 @@ class
 
 inherit BINARY_OP
 
+create
+	make
+
 feature
 	accept(v: VISITOR)
 	do
-		v.visit_sub(current)
+		v.visit_substraction(current)
 	end
 
 end

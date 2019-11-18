@@ -9,7 +9,6 @@ deferred class
 feature --public features, they should not be changed
 	accept(v: VISITOR)
 		deferred
-		v.visit_expression(Current)
 	end
 
 end
