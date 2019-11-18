@@ -7,6 +7,19 @@ note
 class
 	CALL_CHAIN
 inherit EXPRESSION
+
+create
+	make
+
+feature
+	chain: ARRAY[STRING]
+
+feature
+	make(c: ARRAY[STRING])
+	do
+		chain := c
+	end
+
 feature
 	accept(v: VISITOR)
 	do

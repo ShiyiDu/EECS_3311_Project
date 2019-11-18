@@ -8,6 +8,20 @@ class
 	INT_CONST
 inherit EXPRESSION
 
+create
+	make
+
+feature
+	value: INTEGER
+
+feature
+	make(i: INTEGER)
+	require
+		value_in_range: 0 <= i and i <= 9
+	do
+		value := i
+	end
+
 feature
 	accept(v: VISITOR)
 	do
