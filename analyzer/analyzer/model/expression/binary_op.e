@@ -10,13 +10,13 @@ inherit EXPRESSION COMPOSITE
 
 feature
 	make(l: EXPRESSION; r: EXPRESSION)
-	do
-		left := l
-		right := r
-	end
+		do
+			left := l
+			right := r
+		end
 
 feature
 	accept(v: VISITOR)
 		deferred
-	end
+		end
 end

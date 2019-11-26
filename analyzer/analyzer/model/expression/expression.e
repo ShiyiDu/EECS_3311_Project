@@ -9,6 +9,6 @@ deferred class
 feature --public features, they should not be changed
 	accept(v: VISITOR)
 		deferred
-	end
+		end
 
 end

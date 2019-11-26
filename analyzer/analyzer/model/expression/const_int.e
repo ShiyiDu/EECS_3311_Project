@@ -16,16 +16,16 @@ feature
 
 feature
 	make(i: INTEGER)
-	require
-		value_in_range: 0 <= i and i <= 9
-	do
-		value := i
-	end
+		require
+			value_in_range: 0 <= i and i <= 9
+		do
+			value := i
+		end
 
 feature
 	accept(v: VISITOR)
-	do
-		v.visit_int(Current)
+		do
+			v.visit_int(Current)
 
-	end
+		end
 end

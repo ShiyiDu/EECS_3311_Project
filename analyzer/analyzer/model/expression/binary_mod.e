@@ -14,8 +14,8 @@ create
 
 feature
 	accept(v: VISITOR)
-	do
-		v.visit_modulo(current)
-	end
+		do
+			v.visit_modulo(current)
+		end
 
 end

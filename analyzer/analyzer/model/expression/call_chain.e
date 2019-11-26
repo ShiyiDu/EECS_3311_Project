@@ -16,14 +16,14 @@ feature
 
 feature
 	make(c: ARRAY[STRING])
-	do
-		chain := c
-	end
+		do
+			chain := c
+		end
 
 feature
 	accept(v: VISITOR)
-	do
-		--todo
-		v.visit_call_chain(Current)
-	end
+		do
+			--todo
+			v.visit_call_chain(Current)
+		end
 end

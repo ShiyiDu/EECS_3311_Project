@@ -14,8 +14,8 @@ create
 
 feature
 	accept(v: VISITOR)
-	do
-		v.visit_substraction(current)
-	end
+		do
+			v.visit_substraction(current)
+		end
 
 end

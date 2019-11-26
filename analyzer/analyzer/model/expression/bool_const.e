@@ -15,13 +15,13 @@ feature
 
 feature
 	make(b: BOOLEAN)
-	do
-		value := b
-	end
+		do
+			value := b
+		end
 
 feature
 	accept(v: VISITOR)
-	do
-		v.visit_bool(current)
-	end
+		do
+			v.visit_bool(current)
+		end
 end

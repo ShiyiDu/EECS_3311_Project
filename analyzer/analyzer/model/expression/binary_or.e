@@ -14,9 +14,9 @@ create
 
 feature
 	accept(v: VISITOR)
-	do
-		v.visit_or(current)
-	end
+		do
+			v.visit_or(current)
+		end
 
 end
 

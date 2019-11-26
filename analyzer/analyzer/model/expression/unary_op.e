@@ -17,17 +17,17 @@ feature
 
 feature
 	make(s: CHARACTER; e: EXPRESSION)
-	require
-		s ~ '!' or s ~ '-'
-	do
-		symbol := s
-		exp := e
-	end
+		require
+			s ~ '!' or s ~ '-'
+		do
+			symbol := s
+			exp := e
+		end
 
 feature
 	accept(v: VISITOR)
-	do
-		--todo
-		v.visit_unary_op(Current)
-	end
+		do
+			--todo
+			v.visit_unary_op(Current)
+		end
 end
