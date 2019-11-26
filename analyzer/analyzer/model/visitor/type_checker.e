@@ -102,6 +102,60 @@ feature
 			visit_binary(o, "bool")
 		end
 
+feature --language clauses
+	visit_attribute(a: CLASS_ATTRIBUTE)
+		do
+			value := true --the type check for attribute is done during input
+			current.type := a.type
+		end
+
+	visit_program(p: PROGRAM)
+		local
+			type_check: TYPE_CHECKER
+		do
+			value := true
+			create type_check.make
+			across p.classes is c loop
+				c.accept(type_check)
+				value := type_check.value and value
+			end
+		end
+
+	visit_class(c: PROGRAM_CLASS)
+		local
+			type_check: TYPE_CHECKER
+		do
+			value := true
+			create type_check.make
+			--all attributes type correct, all routine type correct
+			across p.routines is r loop
+				r.accept(type_check)
+				value := type_check.value and value
+			end
+
+		end
+
+	visit_assignment(a: ROUTINE_ASSIGNMENT)
+		local
+			type_check: TYPE_CHECKER
+		do
+			--todo: the expression is type correct and matches the type of name
+			create type_check.make
+			a.accept(type_check)
+			value := type_check.value
+		end
+
+	visit_command(c: ROUTINE_COMMAND)
+		deferred
+		end
+
+	visit_parameters(p: ROUTINE_PARAMETERS)
+		deferred
+		end
+
+	visit_query(q: ROUTINE_QUERY)
+		deferred
+		end
 
 feature {NONE} --helper method
 	type: STRING --int, boolean, void, name

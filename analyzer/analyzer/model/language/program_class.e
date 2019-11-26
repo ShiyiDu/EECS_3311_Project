@@ -29,5 +29,10 @@ feature
 			routines.force (new_routine, routines.count + 1)
 		end
 
+	accept(v:VISITOR)
+		do
+			v.visit_class (current)
+		end
+
 
 end

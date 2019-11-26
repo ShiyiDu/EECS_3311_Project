@@ -11,4 +11,9 @@ inherit
 create
 	make
 
+feature
+	accept(v:VISITOR)
+		do
+			v.visit_command (current)
+		end
 end

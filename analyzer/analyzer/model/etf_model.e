@@ -22,12 +22,17 @@ feature {NONE} -- Initialization
 		do
 			create s.make_empty
 			i := 0
+			create program.make
+			create pretty_printer.make
+			create type_checker.make
 		end
 
 feature -- model attributes
 	s : STRING
 	i : INTEGER
-
+	program : PROGRAM
+	pretty_printer : PRETTY_PRINTER
+	type_checker: TYPE_CHECKER
 feature -- model operations
 	default_update
 			-- Perform update to the model state.

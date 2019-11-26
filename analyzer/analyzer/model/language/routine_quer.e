@@ -11,4 +11,10 @@ inherit
 create
 	make
 
+feature
+	accept(v:VISITOR)
+		do
+			v.visit_query (current)
+		end
+
 end

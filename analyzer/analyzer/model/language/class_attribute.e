@@ -18,4 +18,9 @@ feature
 			name := new_name
 		end
 
+	accept(v: VISITOR)
+		do
+			v.visit_attribute (current)
+		end
+
 end

@@ -20,5 +20,9 @@ feature
 			name := new_name
 			exp := new_exp
 		end
+	accept(v:VISITOR)
+		do
+			v.visit_assignment (current)
+		end
 
 end

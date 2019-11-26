@@ -12,8 +12,10 @@ create
 	make
 
 feature -- Constructor
-	create print_result.make
-
+	make
+		do
+			create print_result.make
+		end
 feature
 	print_result: STRING
 
@@ -33,11 +35,6 @@ feature
 	visit_and(a: BINARY_AND)
 		do
 			binary_operation(d, "&&")
-		end
-
-	visit_equals_to(e: BINARY_EQUALS_TO)
-		do
-			binary_operation(d, "==")
 		end
 
 	visit_or(o: BINARY_OR)
@@ -71,7 +68,7 @@ feature
 			until
 				i > c.upper
 			loop
-				print_result := print_result + (if i /= 1 then "." end) + c[i]
+				print_result := print_result + if i /= 1 then "." else "" end + c[i]
 				i := i + 1
 			end
 
@@ -109,7 +106,7 @@ feature
 
 	visit_modulo(m: BINARY_MOD)
 		do
-			binary_operation(m, "%")
+			binary_operation(m, "%%")
 		end
 
 	visit_greater(m: BINARY_GREATER)
@@ -123,7 +120,7 @@ feature
 		end
 
 feature {NONE}-- query
-	binary_operation(b: BINARY_OP, input: STRING)
+	binary_operation(b: BINARY_OP; input: STRING)
 		local
 			binary_left: PRETTY_PRINTER
 			binary_right: PRETTY_PRINTER

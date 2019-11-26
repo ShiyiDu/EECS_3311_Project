@@ -23,6 +23,11 @@ feature
 			types.force (type, types.count+1)
 			names.force (name, names.count+1)
 		end
+
+	accept(v:VISITOR)
+		do
+			v.visit_parameters (current)
+		end
 invariant
 	same_length: types.count = names.count
 end

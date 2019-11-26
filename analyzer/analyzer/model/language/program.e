@@ -22,4 +22,9 @@ feature
 			classes.force (new_class, classes.count+1)
 		end
 
+	accept(v:VISITOR)
+		do
+			v.visit_program (current)
+		end
+
 end

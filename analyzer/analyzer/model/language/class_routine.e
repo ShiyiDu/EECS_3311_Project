@@ -27,5 +27,9 @@ feature
 			assignments.force(new_assign, assignments.count)
 		end
 
+feature
+	accept(v: VISITOR)
+		deferred
+		end
 
 end
