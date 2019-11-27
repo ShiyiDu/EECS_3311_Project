@@ -119,6 +119,148 @@ feature
 			binary_operation(s, "<")
 		end
 
+feature -- for language clauses
+	visit_attribute(a: CLASS_ATTRIBUTE)
+		do
+			print_result := a.type + " " + a.name + ";"
+		end
+
+	visit_program(p: PROGRAM)
+		local
+			i : INTEGER
+			pretty_print : PRETTY_PRINTER
+		do
+			create pretty_print.make
+			from
+				i := 1
+			until
+				i > p.classes.count
+			loop
+				p.classes[i].accept(pretty_print)
+				print_result.append(pretty_print.print_result)
+				if i /= p.classes.count then
+					print_result.append("%N")
+				end
+				i := i+1
+			end
+
+		end
+
+	visit_class(c: PROGRAM_CLASS)
+		local
+			i : INTEGER
+			pretty_print : PRETTY_PRINTER
+		do
+			create pretty_print.make
+			print_result := "class " + c.name + " {"
+
+			--print all attribut
+			from
+				i := 1
+			until
+				i > c.attributes.count
+			loop
+				c.attributes[i].accept(pretty_print)
+				print_result.append("%N" + pretty_print.print_result);
+				i := i + 1
+			end
+
+			from
+				i := 1
+			until
+				i > c.routines.count
+			loop
+				c.routines[i].accept(pretty_print)
+				print_result.append("%N" + pretty_print.print_result);
+				i := i + 1
+			end
+
+			print_result := "%N}"
+		end
+
+	visit_assignment(a: ROUTINE_ASSIGNMENT)
+		local
+			pretty_print: PRETTY_PRINTER
+		do
+			create pretty_print.make
+			--name + '=' + expression
+			if a.exp = void then
+				print_result := a.name + " = null;"
+			else
+				check attached a.exp as exp then
+					exp.accept(pretty_print)
+					print_result := a.name + " = " + pretty_print.print_result + ";"
+				end
+			end
+
+
+		end
+
+	visit_command(c: ROUTINE_COMMAND)
+		local
+			pretty_print: PRETTY_PRINTER
+			i: INTEGER
+		do
+			c.parameters.accept(pretty_print)
+			print_result := c.type + " " + c.name + pretty_print.print_result + " {"
+
+			from
+				i := 1
+			until
+				i > c.assignments.count
+			loop
+				c.assignments[i].accept(pretty_print)
+				print_result.append(pretty_print.print_result + "%N")
+				i := i + 1
+			end
+
+			print_result.append("}")
+		end
+
+	visit_parameters(p: ROUTINE_PARAMETERS)
+		local
+			i: INTEGER
+			assignment: TUPLE[STRING, STRING]
+		do
+			print_result := ""
+			if p.count > 0 then
+				print_result := "("
+				from
+					i := 1
+				until
+					i = p.count
+				loop
+					assignment := p.get_parameter(i)
+					print_result.append(assignment[0] + " " + assignment[1] + " , ")
+					i := i + 1
+				end
+				assignment := p.get_parameter(i)
+				print_result.append(assignment[0] + " " + assignment[1] + ")")
+			end
+		end
+
+	visit_query(q: ROUTINE_QUERY)
+		local
+			pretty_print: PRETTY_PRINTER
+			i: INTEGER
+		do
+			c.parameters.accept(pretty_print)
+			print_result := c.type + " " + c.name + pretty_print.print_result + " {%N"
+
+			print_result := c.type + " "
+			from
+				i := 1
+			until
+				i > c.assignments.count
+			loop
+				c.assignments[i].accept(pretty_print)
+				print_result.append(pretty_print.print_result + "%N")
+				i := i + 1
+			end
+			print_result.append("return Result;%N")
+			print_result.append("}")
+		end
+
 feature {NONE}-- query
 	binary_operation(b: BINARY_OP; input: STRING)
 		local

@@ -137,28 +137,50 @@ feature --language clauses
 
 	visit_assignment(a: ROUTINE_ASSIGNMENT)
 		local
-			type_check: TYPE_CHECKER
+			exp_check: TYPE_CHECKER
 		do
 			--todo: the expression is type correct and matches the type of name
-			create type_check.make
-			a.accept(type_check)
-			value := type_check.value
+			create exp_check.make
+			a.accept(exp_check)
+
+			--check parameter in routine
+			if program_access.contain_parameter(a.routine, a.name) then
+				type := program_access.get_parameter_type(a.routine, a.name)
+				value := exp_check.type ~ type
+			else if program_access.contain_attribute(a.routine.parent_class, a.name) then
+				type := program_access.get_attribute(a.routine.parent_class, a.name)
+				value := exp_check.type ~ type
+			else
+				value := false
+			end
+			end
+
+			--check attribute in class
+
+
 		end
 
 	visit_command(c: ROUTINE_COMMAND)
-		deferred
+		do
+			--todo
 		end
 
 	visit_parameters(p: ROUTINE_PARAMETERS)
-		deferred
+		do
+			--todo
 		end
 
 	visit_query(q: ROUTINE_QUERY)
-		deferred
+		do
+			--todo
 		end
 
 feature {NONE} --helper method
 	type: STRING --int, boolean, void, name
+
+	attributes: LINKED_LIST[STRING] --keep a copy of all the accesable attributes in current field
+
+	program_access: PROGRAM_ACCESS
 
 	visit_binary(a:BINARY_OP; t:STRING)
 		local

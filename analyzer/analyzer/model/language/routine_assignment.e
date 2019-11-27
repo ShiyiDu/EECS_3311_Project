@@ -11,14 +11,16 @@ create
 	make
 
 feature
-	name: STRING
-	exp: EXPRESSION
+	name: STRING --name can be attribute in the class, parameter in the routine
+	exp: detachable EXPRESSION
+	routine: CLASS_ROUTINE -- the parent routine this assignment is in
 
 feature
-	make(new_name: STRING; new_exp: EXPRESSION)
+	make(new_name: STRING; new_exp: detachable EXPRESSION; new_routine: CLASS_ROUTINE)
 		do
 			name := new_name
 			exp := new_exp
+			routine := new_routine
 		end
 	accept(v:VISITOR)
 		do

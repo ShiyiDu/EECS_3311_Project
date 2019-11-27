@@ -6,17 +6,18 @@ note
 
 class
 	PROGRAM
-create
+create {PROGRAM_ACCESS}
 	make
 feature
 	classes: ARRAY[PROGRAM_CLASS]
 
-feature
+feature {NONE}
 	make
 		do
 			create classes.make_empty
 		end
 
+feature
 	add_class(new_class:PROGRAM_CLASS)
 		do
 			classes.force (new_class, classes.count+1)
