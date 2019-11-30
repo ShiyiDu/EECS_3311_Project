@@ -19,6 +19,7 @@ feature
 	make
 		do
 			value := false
+			create type.make_empty
 		end
 
 feature
@@ -94,7 +95,7 @@ feature
 ----------------------------------------- changes --------------------------------------	
 	visit_and(a: BINARY_AND)
 		do
-			visit_binary(o, "bool")
+			visit_binary(a, "bool")
 		end
 
 	visit_or(o: BINARY_OR)
@@ -106,7 +107,7 @@ feature --language clauses
 	visit_attribute(a: CLASS_ATTRIBUTE)
 		do
 			value := true --the type check for attribute is done during input
-			current.type := a.type
+			type := a.type
 		end
 
 	visit_program(p: PROGRAM)
@@ -128,7 +129,7 @@ feature --language clauses
 			value := true
 			create type_check.make
 			--all attributes type correct, all routine type correct
-			across p.routines is r loop
+			across c.routines is r loop
 				r.accept(type_check)
 				value := type_check.value and value
 			end
@@ -148,7 +149,7 @@ feature --language clauses
 				type := program_access.get_parameter_type(a.routine, a.name)
 				value := exp_check.type ~ type
 			else if program_access.contain_attribute(a.routine.parent_class, a.name) then
-				type := program_access.get_attribute(a.routine.parent_class, a.name)
+				type := program_access.get_attribute_type(a.routine.parent_class, a.name)
 				value := exp_check.type ~ type
 			else
 				value := false
@@ -175,10 +176,8 @@ feature --language clauses
 			--todo
 		end
 
-feature {NONE} --helper method
+feature {TYPE_CHECKER} --helper method
 	type: STRING --int, boolean, void, name
-
-	attributes: LINKED_LIST[STRING] --keep a copy of all the accesable attributes in current field
 
 	program_access: PROGRAM_ACCESS
 

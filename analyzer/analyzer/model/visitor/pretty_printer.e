@@ -14,7 +14,7 @@ create
 feature -- Constructor
 	make
 		do
-			create print_result.make
+			create print_result.make_empty
 		end
 feature
 	print_result: STRING
@@ -23,23 +23,23 @@ feature
 
 	visit_int(i: INT_CONST)
 		do
-			print_result := print_result + i.value
+			print_result := print_result + i.value.out
 		end
 --------------------------------------------------------
 	visit_bool(b: BOOL_CONST)
 		do
-			print_result := print_result + b.value
+			print_result := print_result + b.value.out
 
 		end
 ---------------------- changes ------------------------------------	
 	visit_and(a: BINARY_AND)
 		do
-			binary_operation(d, "&&")
+			binary_operation(a, "&&")
 		end
 
 	visit_or(o: BINARY_OR)
 		do
-			binary_operation(d, "||")
+			binary_operation(o, "||")
 		end
 --------------------------------------------------------
 	visit_unary_op(u: UNARY_OP)
@@ -53,7 +53,7 @@ feature
 			create unary_right.make
 			u.exp.accept(unary_right)
 
-			 print_result := "( " + u.symbol + " " + unary_right.value + ")"
+			print_result := "( " + u.symbol.out + " " + unary_right.print_result + ")"
 
 		end
 	--------------------------------------------------------------------------------------
@@ -66,9 +66,9 @@ feature
 			from
 				i := 1
 			until
-				i > c.upper
+				i > c.chain.count
 			loop
-				print_result := print_result + if i /= 1 then "." else "" end + c[i]
+				print_result := print_result + if i /= 1 then "." else "" end + c.chain[i]
 				i := i + 1
 			end
 
@@ -78,7 +78,7 @@ feature
 	-- deferred
 
 		do
-			print_result := binary_operation(a, "+")
+			binary_operation(a, "+")
 
 		end
 ----------------------------------------------------------------------------------------
@@ -201,6 +201,7 @@ feature -- for language clauses
 			pretty_print: PRETTY_PRINTER
 			i: INTEGER
 		do
+			create pretty_print.make
 			c.parameters.accept(pretty_print)
 			print_result := c.type + " " + c.name + pretty_print.print_result + " {"
 
@@ -220,7 +221,7 @@ feature -- for language clauses
 	visit_parameters(p: ROUTINE_PARAMETERS)
 		local
 			i: INTEGER
-			assignment: TUPLE[STRING, STRING]
+			assignment: TUPLE[type:STRING; name:STRING]
 		do
 			print_result := ""
 			if p.count > 0 then
@@ -231,11 +232,11 @@ feature -- for language clauses
 					i = p.count
 				loop
 					assignment := p.get_parameter(i)
-					print_result.append(assignment[0] + " " + assignment[1] + " , ")
+					print_result.append(assignment.type + " " + assignment.name + " , ")
 					i := i + 1
 				end
 				assignment := p.get_parameter(i)
-				print_result.append(assignment[0] + " " + assignment[1] + ")")
+				print_result.append(assignment.type + " " + assignment.name + ")")
 			end
 		end
 
@@ -244,16 +245,17 @@ feature -- for language clauses
 			pretty_print: PRETTY_PRINTER
 			i: INTEGER
 		do
-			c.parameters.accept(pretty_print)
-			print_result := c.type + " " + c.name + pretty_print.print_result + " {%N"
+			create pretty_print.make
+			q.parameters.accept(pretty_print)
+			print_result := q.type + " " + q.name + pretty_print.print_result + " {%N"
 
-			print_result := c.type + " "
+			print_result := q.type + " "
 			from
 				i := 1
 			until
-				i > c.assignments.count
+				i > q.assignments.count
 			loop
-				c.assignments[i].accept(pretty_print)
+				q.assignments[i].accept(pretty_print)
 				print_result.append(pretty_print.print_result + "%N")
 				i := i + 1
 			end
@@ -266,12 +268,13 @@ feature {NONE}-- query
 		local
 			binary_left: PRETTY_PRINTER
 			binary_right: PRETTY_PRINTER
-
 		do
+			create binary_left.make
+			create binary_right.make
 			b.left.accept(binary_left)
 			b.left.accept(binary_right)
-			Result := "(" + " " + binary_left.value + " " + input + " "
-			+ binary_right.value + ")"
+			print_result := "(" + " " + binary_left.print_result + " " + input + " "
+			+ binary_right.print_result + ")"
 
 		end
 

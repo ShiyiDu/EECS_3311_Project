@@ -12,15 +12,19 @@ feature {NONE}--do a iterator pattern here?
 	types: ARRAY[STRING]
 	names: ARRAY[STRING]
 feature
-	routine: CLASS_ROUTINE -- the routine this parameter is for
+	routine: detachable CLASS_ROUTINE -- the routine this parameter is for
 feature
-	make(new_routine: CLASS_ROUTINE)
+	make
 		do
 			create types.make_empty
 			create names.make_empty
-			routine := new_routine
 			names.compare_objects
 			types.compare_objects
+		end
+
+	set_routine(new_routine: CLASS_ROUTINE)
+		do
+			routine := new_routine
 		end
 
 	add_parameter(type:STRING; name:STRING)

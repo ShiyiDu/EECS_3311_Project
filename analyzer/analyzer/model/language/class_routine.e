@@ -18,8 +18,9 @@ feature
 			type := new_type
 			name := new_name
 			parent_class := new_class
-			create parameters.make
 			create assignments.make_empty
+			create parameters.make
+			parameters.set_routine (current)
 		end
 
 	add_parameter(par_type:STRING; par_name:STRING)

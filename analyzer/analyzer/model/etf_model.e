@@ -22,7 +22,7 @@ feature {NONE} -- Initialization
 		do
 			create s.make_empty
 			i := 0
-			create program.make
+			program := program_access.program
 			create pretty_printer.make
 			create type_checker.make
 		end
@@ -31,6 +31,7 @@ feature -- model attributes
 	s : STRING
 	i : INTEGER
 	program : PROGRAM
+	program_access : PROGRAM_ACCESS
 	pretty_printer : PRETTY_PRINTER
 	type_checker: TYPE_CHECKER
 feature -- model operations
