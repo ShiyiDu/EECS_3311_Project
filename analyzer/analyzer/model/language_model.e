@@ -23,6 +23,7 @@ feature {NONE} -- Initialization
 			program := program_access.program
 			create pretty_printer.make
 			create type_checker.make
+			create java_code.make_empty
 		end
 
 feature -- model attributes
@@ -32,13 +33,10 @@ feature -- model attributes
 	pretty_printer : PRETTY_PRINTER
 	type_checker: TYPE_CHECKER
 
+	java_code: STRING
+
 	ass: detachable ROUTINE_ASSIGNMENT -- the current assignment to be filled
 feature -- model operations
-	default_update
-			-- Perform update to the model state.
-		do
-		end
-
 	reset
 			-- Reset model state.
 		do
@@ -85,7 +83,7 @@ feature --user commands
 				com.add_parameter (p.type, p.name)
 			end
 
-			cl.add_routine (com)
+			cl.add_command (com)
 		end
 
 	add_query(cn: STRING; fn: STRING; pars:ARRAY[TUPLE[name:STRING;type:STRING]]; rt: STRING)
@@ -100,7 +98,7 @@ feature --user commands
 				que.add_parameter (p.type, p.name)
 			end
 
-			cl.add_routine (que)
+			cl.add_query (que)
 		end
 
 	add_assignment_instruction(cn: STRING; fn: STRING; n: STRING)
@@ -129,6 +127,82 @@ feature --user commands
 			--todo: ass can not be void
 		end
 
+	bool_value(c: BOOLEAN)
+		local
+			new_exp: BOOL_CONST
+		do
+			create new_exp.make (c)
+			my_ass.add_expression (new_exp)
+		end
+
+	int_value(c: INTEGER)
+		local
+			new_int: INT_CONST
+		do
+			create new_int.make (c)
+			my_ass.add_expression (new_int)
+		end
+
+	add
+		do
+			my_ass.add_expression (create {BINARY_ADD}.make)
+		end
+
+	sub
+		do
+			my_ass.add_expression (create {BINARY_SUB}.make)
+		end
+
+	mult
+		do
+			my_ass.add_expression (create {BINARY_MULT}.make)
+		end
+
+	div --quotient
+		do
+			my_ass.add_expression (create {BINARY_DIV}.make)
+		end
+
+	mod
+		do
+			my_ass.add_expression (create {BINARY_MOD}.make)
+		end
+
+	conjunc
+		do
+			my_ass.add_expression (create {BINARY_AND}.make)
+		end
+
+	disjunc
+		do
+			my_ass.add_expression (create {BINARY_OR}.make)
+		end
+
+	equal_to
+		do
+			my_ass.add_expression (create {BINARY_EQUAL}.make)
+		end
+
+	greater
+		do
+			my_ass.add_expression (create {BINARY_GREATER}.make)
+		end
+
+	less
+		do
+			my_ass.add_expression (create {BINARY_SMALLER}.make)
+		end
+
+	num_neg
+		do
+			--todo
+		end
+
+	logic_neg
+		do
+			--todo
+		end
+
 feature {NONE} --helper
 	my_ass: ROUTINE_ASSIGNMENT
 		do
@@ -141,9 +215,7 @@ feature -- queries
 	out : STRING
 		do
 			create Result.make_from_string ("  ")
-			Result.append ("System State: default model state ")
-			Result.append ("(")
-			Result.append (")")
+			Result.append (program.out)
 		end
 
 end
