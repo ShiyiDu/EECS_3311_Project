@@ -43,7 +43,11 @@ feature
 			value := true
 			create checker.make
 
-			u.exp.accept(checker)
+			if u.exp /= void then
+				u.exp_instance.accept(checker)
+			else
+				--todo: error?	
+			end
 			type := checker.type
 		end
 

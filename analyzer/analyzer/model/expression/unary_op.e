@@ -16,15 +16,15 @@ feature
 	exp: detachable EXPRESSION
 
 feature
-	make(s: CHARACTER;)
+	make(s: CHARACTER)
 		require --! means logical negation, - means numerical negation
 			s ~ '!' or s ~ '-'
 		do
 			symbol := s
-			exp := e
+			exp := void
 		end
 
-feature {NONE}
+feature
 	exp_instance: EXPRESSION
 		require
 			exp_not_void: exp /= void
@@ -47,7 +47,7 @@ feature
 			if exp = void then
 				exp := new_exp
 			else
-				exp.fill (new_exp)
+				exp_instance.fill (new_exp)
 			end
 		end
 
@@ -57,7 +57,7 @@ feature
 			if exp = void then
 				result := false
 			else
-				result := exp.full
+				result := exp_instance.full
 			end
 		end
 end
