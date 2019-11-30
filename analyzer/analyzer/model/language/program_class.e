@@ -13,11 +13,12 @@ feature
 	attributes: ARRAY[CLASS_ATTRIBUTE]
 	routines: ARRAY[CLASS_ROUTINE]
 	program: PROGRAM -- the program that contains this class
+	program_access: PROGRAM_ACCESS
 feature
-	make(new_name:STRING; new_program: PROGRAM)
+	make(new_name:STRING)
 		do
 			name := new_name
-			program := new_program
+			program := program_access.program
 			create attributes.make_empty
 			create routines.make_empty
 		end

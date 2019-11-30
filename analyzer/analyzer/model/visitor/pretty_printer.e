@@ -271,8 +271,15 @@ feature {NONE}-- query
 		do
 			create binary_left.make
 			create binary_right.make
-			b.left.accept(binary_left)
-			b.left.accept(binary_right)
+
+			check attached b.left as l then
+				check attached b.right as r then
+					l.accept(binary_left)
+					r.accept(binary_right)
+				end
+			end
+
+
 			print_result := "(" + " " + binary_left.print_result + " " + input + " "
 			+ binary_right.print_result + ")"
 

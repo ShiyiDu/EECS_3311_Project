@@ -187,8 +187,14 @@ feature {TYPE_CHECKER} --helper method
 		do
 			create {TYPE_CHECKER} left.make
 			create {TYPE_CHECKER} right.make
-			a.left.accept(left)
-			a.right.accept(right)
+
+			check attached a.left as l then
+				check attached a.right as r then
+					l.accept(left)
+					r.accept(right)
+				end
+			end
+
 
 			value := left.type ~ right.type
 

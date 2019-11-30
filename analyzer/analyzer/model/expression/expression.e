@@ -11,4 +11,13 @@ feature --public features, they should not be changed
 		deferred
 		end
 
+	fill(exp: EXPRESSION)
+		require
+			can_be_filled: not full
+		deferred
+		end
+
+	full:BOOLEAN
+		deferred
+		end
 end

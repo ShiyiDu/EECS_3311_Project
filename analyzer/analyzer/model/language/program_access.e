@@ -25,6 +25,17 @@ feature --query
 			end
 		end
 
+	get_class(name: STRING) : PROGRAM_CLASS
+		require
+			class_exist: contain_class(name)
+		do
+			result := program.classes[1]
+			across program.classes is c loop
+				if c.name ~ name then
+					result := c
+				end
+			end
+		end
 
 	contain_attribute(c: PROGRAM_CLASS; name: STRING) : BOOLEAN
 		do
@@ -37,6 +48,18 @@ feature --query
 		do
 			result := across c.routines is rou some
 				rou.name ~ name
+			end
+		end
+
+	get_routine(c:PROGRAM_CLASS; name: STRING) : CLASS_ROUTINE
+		require
+			contain_routine(c, name)
+		do
+			result := c.routines[1]
+			across c.routines is r loop
+				if r.name ~ name then
+					result := r
+				end
 			end
 		end
 

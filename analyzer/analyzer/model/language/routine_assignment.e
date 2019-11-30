@@ -12,7 +12,7 @@ create
 
 feature
 	name: STRING --name can be attribute in the class, parameter in the routine
-	exp: detachable EXPRESSION
+	exp: detachable EXPRESSION --name = NULL if it is void
 	routine: CLASS_ROUTINE -- the parent routine this assignment is in
 
 feature
@@ -25,6 +25,11 @@ feature
 	accept(v:VISITOR)
 		do
 			v.visit_assignment (current)
+		end
+
+	set_expression(expression: EXPRESSION)
+		do
+			exp := expression
 		end
 
 end

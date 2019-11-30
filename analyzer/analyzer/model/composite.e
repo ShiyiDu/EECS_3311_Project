@@ -8,6 +8,7 @@ deferred class
 	COMPOSITE
 
 feature
-	left, right: EXPRESSION
+	left, right: detachable EXPRESSION
+	parent: detachable EXPRESSION
 
 end
