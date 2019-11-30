@@ -12,12 +12,14 @@ feature --public features, they should not be changed
 		end
 
 	fill(exp: EXPRESSION)
+		--fill the expression
 		require
 			can_be_filled: not full
 		deferred
 		end
 
 	full:BOOLEAN
+		--can the expression be filled with more constant/call chain
 		deferred
 		end
 end

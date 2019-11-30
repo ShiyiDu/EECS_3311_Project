@@ -26,4 +26,13 @@ feature
 			--todo
 			v.visit_call_chain(Current)
 		end
+	fill(exp: EXPRESSION)
+		do
+		end
+
+	full: BOOLEAN
+		--call_chain is already filled
+		do
+			result := true
+		end
 end

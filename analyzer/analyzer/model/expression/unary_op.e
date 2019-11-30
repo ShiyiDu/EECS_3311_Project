@@ -30,4 +30,15 @@ feature
 			--todo
 			v.visit_unary_op(Current)
 		end
+	fill(new_exp:EXPRESSION)
+		do
+			--todo:
+			exp := new_exp
+		end
+
+	full:BOOLEAN
+		do
+			--todo:
+			result := false
+		end
 end

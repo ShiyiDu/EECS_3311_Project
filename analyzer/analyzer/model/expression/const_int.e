@@ -28,4 +28,14 @@ feature
 			v.visit_int(Current)
 
 		end
+	fill(exp: EXPRESSION)
+		do
+			
+		end
+
+	full: BOOLEAN
+		--constant is already filled
+		do
+			result := true
+		end
 end

@@ -17,10 +17,39 @@ feature
 		end
 
 feature
+	left_exp: EXPRESSION
+		do
+			check attached left as l then
+				result := l
+			end
+		end
+
+	right_exp: EXPRESSION
+		do
+			check attached right as r then
+				result := r
+			end
+		end
+
+feature
 
 	fill(exp:EXPRESSION)
 		do
+			--recursively filling the expression in post-order
+			if not has_left then
+				left := exp
+			else if not left_exp.full then
+				left_exp.fill (exp)
+			else if not has_right then
+				right := exp
+			else if not right_exp.full then
+				right_exp.fill (exp)
+			end end end end
+		end
 
+	full: BOOLEAN
+		do
+			result := left_exp.full and right_exp.full
 		end
 
 	has_right: BOOLEAN

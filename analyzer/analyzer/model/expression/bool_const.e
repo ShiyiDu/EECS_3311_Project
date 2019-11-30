@@ -24,4 +24,13 @@ feature
 		do
 			v.visit_bool(current)
 		end
+
+	fill(exp: EXPRESSION)
+		do
+		end
+	full: BOOLEAN
+		--constant is already filled
+		do
+			result := true
+		end
 end

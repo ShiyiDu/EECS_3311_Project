@@ -27,9 +27,26 @@ feature
 			v.visit_assignment (current)
 		end
 
-	set_expression(expression: EXPRESSION)
+	add_expression(expression: EXPRESSION)
+		require
+			can_be_filled: not expression_full
 		do
-			exp := expression
+			if exp = void then
+				exp := expression
+			else
+				check attached exp as e then
+					e.fill(expression)
+				end
+			end
 		end
-
+	expression_full: BOOLEAN
+		do
+			if exp = void then
+				result := false
+			else
+				check attached exp as e then
+					result := e.full
+				end
+			end
+		end
 end

@@ -32,8 +32,7 @@ feature -- model attributes
 	pretty_printer : PRETTY_PRINTER
 	type_checker: TYPE_CHECKER
 
-	exp: detachable EXPRESSION -- the current expression being set, void if not setting
-	ass: detachable ROUTINE_ASSIGNMENT -- same as above
+	ass: detachable ROUTINE_ASSIGNMENT -- the current assignment to be filled
 feature -- model operations
 	default_update
 			-- Perform update to the model state.
@@ -117,22 +116,25 @@ feature --user commands
 		end
 
 	add_call_chain(chain: ARRAY[STRING])
+		require
+			have_ass:
+				ass /= void
 		local
 			new_chain: CALL_CHAIN
 		do
 			create new_chain.make (chain)
-			if exp = void then
-				exp := new_chain
-				check attached ass as a then
-					a.set_expression(new_chain)
-				end
-				ass := void
-				exp := void
-			else
-				--if it is not void then we are currently setting expression
 
-			end
+			my_ass.add_expression (new_chain)
+
 			--todo: ass can not be void
+		end
+
+feature {NONE} --helper
+	my_ass: ROUTINE_ASSIGNMENT
+		do
+			check attached ass as a then
+				result := a
+			end
 		end
 
 feature -- queries
