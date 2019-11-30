@@ -1,0 +1,3 @@
+add_class("A")
+add_attribute("A","i","INTEGER")
+add_command("A","set_i",<<["x", "INTEGER"], ["y", "INTEGER"]>>)

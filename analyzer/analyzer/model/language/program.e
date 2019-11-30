@@ -6,6 +6,8 @@ note
 
 class
 	PROGRAM
+inherit
+	ANY redefine out end
 create {PROGRAM_ACCESS}
 	make
 feature
@@ -26,6 +28,15 @@ feature
 	accept(v:VISITOR)
 		do
 			v.visit_program (current)
+		end
+
+	out: STRING
+		do
+			create Result.make_from_string ("  ")
+			Result.append ("Number of classes being specified: " + classes.count.out)
+			across classes is c loop
+				Result.append( "%N" + c.out)
+			end
 		end
 
 end

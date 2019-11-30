@@ -49,7 +49,11 @@ feature
 
 	full: BOOLEAN
 		do
-			result := left_exp.full and right_exp.full
+			if left /= void and right /= void then
+				result := left_exp.full and right_exp.full
+			else
+				result := false
+			end
 		end
 
 	has_right: BOOLEAN
