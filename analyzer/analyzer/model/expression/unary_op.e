@@ -13,18 +13,29 @@ create
 
 feature
 	symbol: CHARACTER
-	exp: EXPRESSION
+	exp: detachable EXPRESSION
 
 feature
-	make(s: CHARACTER; e: EXPRESSION)
-		require
+	make(s: CHARACTER;)
+		require --! means logical negation, - means numerical negation
 			s ~ '!' or s ~ '-'
 		do
 			symbol := s
 			exp := e
 		end
 
+feature {NONE}
+	exp_instance: EXPRESSION
+		require
+			exp_not_void: exp /= void
+		do
+			check attached exp as e then
+				result := e
+			end
+		end
+
 feature
+
 	accept(v: VISITOR)
 		do
 			--todo
@@ -33,12 +44,20 @@ feature
 	fill(new_exp:EXPRESSION)
 		do
 			--todo:
-			exp := new_exp
+			if exp = void then
+				exp := new_exp
+			else
+				exp.fill (new_exp)
+			end
 		end
 
 	full:BOOLEAN
 		do
 			--todo:
-			result := false
+			if exp = void then
+				result := false
+			else
+				result := exp.full
+			end
 		end
 end
