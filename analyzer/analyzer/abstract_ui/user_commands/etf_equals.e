@@ -6,15 +6,15 @@ note
 
 class
 	ETF_EQUALS
-inherit
+inherit 
 	ETF_EQUALS_INTERFACE
 create
 	make
-feature -- command
+feature -- command 
 	equals
     	do
 			-- perform some update on the model state
-			model.equal_to
+			model.default_update
 			etf_cmd_container.on_change.notify ([Current])
     	end
 

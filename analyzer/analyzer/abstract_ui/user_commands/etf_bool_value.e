@@ -6,15 +6,15 @@ note
 
 class
 	ETF_BOOL_VALUE
-inherit
+inherit 
 	ETF_BOOL_VALUE_INTERFACE
 create
 	make
-feature -- command
+feature -- command 
 	bool_value(c: BOOLEAN)
     	do
 			-- perform some update on the model state
-			model.bool_value (c)
+			model.default_update
 			etf_cmd_container.on_change.notify ([Current])
     	end
 

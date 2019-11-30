@@ -6,15 +6,15 @@ note
 
 class
 	ETF_GENERATE_JAVA_CODE
-inherit
+inherit 
 	ETF_GENERATE_JAVA_CODE_INTERFACE
 create
 	make
-feature -- command
+feature -- command 
 	generate_java_code
     	do
 			-- perform some update on the model state
-			model.generate_java_code
+			model.default_update
 			etf_cmd_container.on_change.notify ([Current])
     	end
 

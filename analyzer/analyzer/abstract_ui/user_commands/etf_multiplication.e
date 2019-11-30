@@ -6,15 +6,15 @@ note
 
 class
 	ETF_MULTIPLICATION
-inherit
+inherit 
 	ETF_MULTIPLICATION_INTERFACE
 create
 	make
-feature -- command
+feature -- command 
 	multiplication
     	do
 			-- perform some update on the model state
-			model.mult
+			model.default_update
 			etf_cmd_container.on_change.notify ([Current])
     	end
 

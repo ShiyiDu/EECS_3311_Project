@@ -43,11 +43,7 @@ feature
 			value := true
 			create checker.make
 
-			if u.exp /= void then
-				u.exp_instance.accept(checker)
-			else
-				--todo: error?	
-			end
+			u.exp.accept(checker)
 			type := checker.type
 		end
 
@@ -133,12 +129,7 @@ feature --language clauses
 			value := true
 			create type_check.make
 			--all attributes type correct, all routine type correct
-			across c.queries is r loop
-				r.accept(type_check)
-				value := type_check.value and value
-			end
-
-			across c.commands is r loop
+			across c.routines is r loop
 				r.accept(type_check)
 				value := type_check.value and value
 			end

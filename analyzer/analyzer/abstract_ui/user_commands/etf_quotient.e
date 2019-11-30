@@ -6,15 +6,15 @@ note
 
 class
 	ETF_QUOTIENT
-inherit
+inherit 
 	ETF_QUOTIENT_INTERFACE
 create
 	make
-feature -- command
+feature -- command 
 	quotient
     	do
 			-- perform some update on the model state
-			model.div
+			model.default_update
 			etf_cmd_container.on_change.notify ([Current])
     	end
 

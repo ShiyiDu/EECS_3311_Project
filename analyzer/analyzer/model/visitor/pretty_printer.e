@@ -46,16 +46,14 @@ feature
 	-- deferred
 	-- Handling the expressions
 		local
-			pretty_print: PRETTY_PRINTER
+	--		unary_left: CHARACTER
+			unary_right: PRETTY_PRINTER
 		do
-			create pretty_print.make
-			if u.exp /= void then
-				u.exp_instance.accept(pretty_print)
-			else
-				--todo: error?	
-			end
+	--		create unary_left.make
+			create unary_right.make
+			u.exp.accept(unary_right)
 
-			print_result := "( " + u.symbol.out + " " + pretty_print.print_result + ")"
+			print_result := "( " + u.symbol.out + " " + unary_right.print_result + ")"
 
 		end
 	--------------------------------------------------------------------------------------
