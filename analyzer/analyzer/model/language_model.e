@@ -21,6 +21,7 @@ feature {NONE} -- Initialization
 			-- Initialization for `Current'.
 		do
 			program := program_access.program
+			state := 1
 			create pretty_printer.make
 			create type_checker.make
 			create java_code.make_empty
@@ -34,6 +35,11 @@ feature -- model attributes
 	type_checker: TYPE_CHECKER
 
 	java_code: STRING
+
+	state: INTEGER
+	default_state: INTEGER = 1
+	generate_code: INTEGER = 2
+	type_checking: INTEGER = 3
 
 	ass: detachable ROUTINE_ASSIGNMENT -- the current assignment to be filled
 feature -- model operations
@@ -54,6 +60,7 @@ feature --user commands
 			pretty_printer.make
 			program.accept (pretty_printer)
 			java_code := pretty_printer.print_result
+			state := generate_code
 		end
 
 	add_class(cn: STRING)
@@ -128,6 +135,8 @@ feature --user commands
 
 			my_ass.add_expression (new_chain)
 
+			check_assignment
+
 			--todo: ass can not be void
 		end
 
@@ -137,6 +146,7 @@ feature --user commands
 		do
 			create new_exp.make (c)
 			my_ass.add_expression (new_exp)
+			check_assignment
 		end
 
 	int_value(c: INTEGER)
@@ -145,66 +155,57 @@ feature --user commands
 		do
 			create new_int.make (c)
 			my_ass.add_expression (new_int)
+			check_assignment
 		end
 
 	add
 		do
 			my_ass.add_expression (create {BINARY_ADD}.make)
-			check_assignment
 		end
 
 	sub
 		do
 			my_ass.add_expression (create {BINARY_SUB}.make)
-			check_assignment
 		end
 
 	mult
 		do
 			my_ass.add_expression (create {BINARY_MULT}.make)
-			check_assignment
 		end
 
 	div --quotient
 		do
 			my_ass.add_expression (create {BINARY_DIV}.make)
-			check_assignment
 		end
 
 	mod
 		do
 			my_ass.add_expression (create {BINARY_MOD}.make)
-			check_assignment
 		end
 
 	conjunc
 		do
 			my_ass.add_expression (create {BINARY_AND}.make)
-			check_assignment
 		end
 
 	disjunc
 		do
 			my_ass.add_expression (create {BINARY_OR}.make)
-			check_assignment
 		end
 
 	equal_to
 		do
 			my_ass.add_expression (create {BINARY_EQUAL}.make)
-			check_assignment
 		end
 
 	greater
 		do
 			my_ass.add_expression (create {BINARY_GREATER}.make)
-			check_assignment
 		end
 
 	less
 		do
 			my_ass.add_expression (create {BINARY_SMALLER}.make)
-			check_assignment
 		end
 
 	num_neg
@@ -235,19 +236,25 @@ feature -- queries
 	out : STRING
 		do
 			create Result.make_from_string ("")
-			Result.append (program.out)
-			if ass /= void then
-				Result.append ("%N  Routine currently being implemented: " + "{")
-				Result.append (my_ass.routine.parent_class.name + "}.")
-				Result.append (my_ass.routine.name)
-				Result.append ("%N  Assignment being specified: " + my_ass.out)
-			end
 
-			if not java_code.is_empty then
-				Result.append("%N" + java_code);
+			inspect state
+			when default_state then
+				Result.append (program.out)
+				if ass /= void then
+					Result.append ("%N  Routine currently being implemented: " + "{")
+					Result.append (my_ass.routine.parent_class.name + "}.")
+					Result.append (my_ass.routine.name)
+					Result.append ("%N  Assignment being specified: " + my_ass.out)
+				end
+			when generate_code then
+				Result.append(java_code);
+				state := default_state
+			when type_checking then
+
+			else
+
 			end
 		end
-
 end
 
 

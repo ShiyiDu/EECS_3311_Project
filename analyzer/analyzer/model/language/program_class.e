@@ -12,6 +12,7 @@ create
 	make
 feature
 	name: STRING
+	--how do I preserve the order?
 	attributes: ARRAY[CLASS_ATTRIBUTE]
 	queries: ARRAY[ROUTINE_QUERY]
 	commands: ARRAY[ROUTINE_COMMAND]
@@ -64,7 +65,7 @@ feature
 			across attributes is att loop
 				result.append ("%N        " + att.out)
 			end
-			result.append ("%N      Number of queries:" + queries.count.out)
+			result.append ("%N      Number of queries: " + queries.count.out)
 			across queries is q loop
 				result.append ("%N        " + q.out)
 			end

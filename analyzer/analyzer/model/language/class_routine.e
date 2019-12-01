@@ -34,7 +34,7 @@ feature
 		end
 	add_assignment(new_assign:ROUTINE_ASSIGNMENT)
 		do
-			assignments.force(new_assign, assignments.count)
+			assignments.force(new_assign, assignments.count + 1)
 		end
 
 feature

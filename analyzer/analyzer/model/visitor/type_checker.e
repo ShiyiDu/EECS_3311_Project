@@ -26,13 +26,13 @@ feature
 	visit_int(i: INT_CONST)
 		do
 			value := true
-			type := "int"
+			type := "INTEGER"
 		end
 
 	visit_bool(b: BOOL_CONST)
 		do
 			value := true
-			type := "bool"
+			type := "BOOLEAN"
 		end
 
 	visit_unary_op(u: UNARY_OP)
@@ -59,52 +59,52 @@ feature
 
 	visit_addition(a: BINARY_ADD)
 		do
-			visit_binary(a, "int")
+			visit_binary(a, "INTEGER")
 		end
 
 	visit_substraction(s: BINARY_SUB)
 		do
-			visit_binary(s, "int")
+			visit_binary(s, "INTEGER")
 		end
 
 	visit_multiplication(m: BINARY_MULT)
 		do
-			visit_binary(m, "int")
+			visit_binary(m, "INTEGER")
 		end
 
 	visit_division(d: BINARY_DIV)
 		do
-			visit_binary(d, "int")
+			visit_binary(d, "INTEGER")
 		end
 
 	visit_equal(e: BINARY_EQUAL)
 		do
-			visit_binary(e, "int")
+			visit_binary(e, "INTEGER")
 		end
 
 	visit_modulo(m: BINARY_MOD)
 		do
-			visit_binary(m, "int")
+			visit_binary(m, "INTEGER")
 		end
 
 	visit_greater(g: BINARY_GREATER)
 		do
-			visit_binary(g, "int")
+			visit_binary(g, "INTEGER")
 		end
 
 	visit_smaller(s: BINARY_SMALLER)
 		do
-			visit_binary(s, "int")
+			visit_binary(s, "INTEGER")
 		end
 ----------------------------------------- changes --------------------------------------	
 	visit_and(a: BINARY_AND)
 		do
-			visit_binary(a, "bool")
+			visit_binary(a, "BOOLEAN")
 		end
 
 	visit_or(o: BINARY_OR)
 		do
-			visit_binary(o, "bool")
+			visit_binary(o, "BOOLEAN")
 		end
 
 feature --language clauses
