@@ -6,6 +6,10 @@ note
 
 class
 	ROUTINE_PARAMETERS
+inherit
+	ANY
+		redefine out
+	end
 create
 	make
 feature {NONE}--do a iterator pattern here?
@@ -71,6 +75,19 @@ feature --query
 				end
 				i := i + 1
 			end
+		end
+
+feature
+	out: STRING
+		do
+			create result.make_from_string ("(")
+			across types is t loop
+				result.append (t)
+				result.append (", ")
+			end
+
+			result.remove_tail (2);
+			result.append (")")
 		end
 
 invariant

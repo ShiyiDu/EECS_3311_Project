@@ -6,6 +6,10 @@ note
 
 deferred class
 	EXPRESSION
+--inherit
+--	ANY
+--		undefine out
+--	end
 feature --public features, they should not be changed
 	accept(v: VISITOR)
 		deferred
@@ -22,4 +26,8 @@ feature --public features, they should not be changed
 		--can the expression be filled with more constant/call chain
 		deferred
 		end
+
+--	out: STRING
+--		deferred
+--		end
 end

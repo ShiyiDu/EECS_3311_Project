@@ -47,15 +47,18 @@ feature
 	-- Handling the expressions
 		local
 			pretty_print: PRETTY_PRINTER
+			str: STRING
 		do
 			create pretty_print.make
+			create str.make_empty
 			if u.exp /= void then
 				u.exp_instance.accept(pretty_print)
+				str := pretty_print.print_result
 			else
-				--todo: error?	
+				str := "?"
 			end
 
-			print_result := "( " + u.symbol.out + " " + pretty_print.print_result + ")"
+			print_result := "( " + u.symbol.out + " " + str + ")"
 
 		end
 	--------------------------------------------------------------------------------------
@@ -124,7 +127,7 @@ feature
 feature -- for language clauses
 	visit_attribute(a: CLASS_ATTRIBUTE)
 		do
-			print_result := a.type + " " + a.name + ";"
+			print_result := "  " + a.type + " " + a.name + ";"
 		end
 
 	visit_program(p: PROGRAM)
@@ -154,7 +157,7 @@ feature -- for language clauses
 			pretty_print : PRETTY_PRINTER
 		do
 			create pretty_print.make
-			print_result := "class " + c.name + " {"
+			print_result := "  class " + c.name + " {"
 
 			--print all attribut
 			from
@@ -177,7 +180,7 @@ feature -- for language clauses
 				i := i + 1
 			end
 
-			print_result := "%N}"
+			print_result.append ("%N  }")
 		end
 
 	visit_assignment(a: ROUTINE_ASSIGNMENT)
@@ -187,11 +190,11 @@ feature -- for language clauses
 			create pretty_print.make
 			--name + '=' + expression
 			if a.exp = void then
-				print_result := a.name + " = null;"
+				print_result := "%N      " + a.name + " = null;"
 			else
 				check attached a.exp as exp then
 					exp.accept(pretty_print)
-					print_result := a.name + " = " + pretty_print.print_result + ";"
+					print_result := "%N      " + a.name + " = " + pretty_print.print_result + ";"
 				end
 			end
 
@@ -205,19 +208,19 @@ feature -- for language clauses
 		do
 			create pretty_print.make
 			c.parameters.accept(pretty_print)
-			print_result := c.type + " " + c.name + pretty_print.print_result + " {"
+			print_result :="    " + c.type + " " + c.name + pretty_print.print_result + " {"
 
 			from
 				i := 1
 			until
-				i > c.assignments.count
+				i = c.assignments.count --should this be equal??
 			loop
 				c.assignments[i].accept(pretty_print)
 				print_result.append(pretty_print.print_result + "%N")
 				i := i + 1
 			end
 
-			print_result.append("}")
+			print_result.append("%N    }")
 		end
 
 	visit_parameters(p: ROUTINE_PARAMETERS)
@@ -227,7 +230,7 @@ feature -- for language clauses
 		do
 			print_result := ""
 			if p.count > 0 then
-				print_result := "("
+				print_result.append ("(")
 				from
 					i := 1
 				until
@@ -249,9 +252,8 @@ feature -- for language clauses
 		do
 			create pretty_print.make
 			q.parameters.accept(pretty_print)
-			print_result := q.type + " " + q.name + pretty_print.print_result + " {%N"
+			print_result := "    "+ q.type + " " + q.name + pretty_print.print_result + " {%N"
 
-			print_result := q.type + " "
 			from
 				i := 1
 			until
@@ -262,7 +264,7 @@ feature -- for language clauses
 				i := i + 1
 			end
 			print_result.append("return Result;%N")
-			print_result.append("}")
+			print_result.append("%N    }")
 		end
 
 feature {NONE}-- query
@@ -270,20 +272,35 @@ feature {NONE}-- query
 		local
 			binary_left: PRETTY_PRINTER
 			binary_right: PRETTY_PRINTER
+			left_str: STRING
+			right_str: STRING
 		do
 			create binary_left.make
 			create binary_right.make
+			create left_str.make_empty
+			create right_str.make_empty
 
-			check attached b.left as l then
-				check attached b.right as r then
-					l.accept(binary_left)
-					r.accept(binary_right)
+			if b.left = void then
+				left_str := "?"
+				right_str := "nil"
+			else if b.right = void then
+				b.left_exp.accept (binary_left)
+				left_str := binary_left.print_result
+
+				if b.left_exp.full then
+					right_str := "?"
+				else
+					right_str := "nil"
 				end
-			end
+			else
+				b.left_exp.accept (binary_left)
+				b.right_exp.accept (binary_right)
+				left_str := binary_left.print_result
+				right_str := binary_right.print_result
+			end end
 
-
-			print_result := "(" + " " + binary_left.print_result + " " + input + " "
-			+ binary_right.print_result + ")"
+			print_result := "(" + left_str + " " + input + " "
+			+ right_str + ")"
 
 		end
 

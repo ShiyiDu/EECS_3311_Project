@@ -60,4 +60,15 @@ feature
 				result := exp_instance.full
 			end
 		end
+
+--feature
+--	out:STRING
+--		do
+--			create result.make_empty
+--			if exp = void then
+--				result := "(" + symbol + " ?)"
+--			else
+--				result := "(" + symbol + " " + exp_instance.out + ")"
+--			end
+--		end
 end

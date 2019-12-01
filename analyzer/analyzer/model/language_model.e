@@ -51,6 +51,9 @@ feature --user commands
 	generate_java_code
 		do
 			--todo
+			pretty_printer.make
+			program.accept (pretty_printer)
+			java_code := pretty_printer.print_result
 		end
 
 	add_class(cn: STRING)
@@ -111,6 +114,7 @@ feature --user commands
 			routine := program_access.get_routine(cl, fn);
 			create assignment.make (n, void, routine)
 			ass := assignment
+			routine.add_assignment (my_ass)
 		end
 
 	add_call_chain(chain: ARRAY[STRING])
@@ -146,51 +150,61 @@ feature --user commands
 	add
 		do
 			my_ass.add_expression (create {BINARY_ADD}.make)
+			check_assignment
 		end
 
 	sub
 		do
 			my_ass.add_expression (create {BINARY_SUB}.make)
+			check_assignment
 		end
 
 	mult
 		do
 			my_ass.add_expression (create {BINARY_MULT}.make)
+			check_assignment
 		end
 
 	div --quotient
 		do
 			my_ass.add_expression (create {BINARY_DIV}.make)
+			check_assignment
 		end
 
 	mod
 		do
 			my_ass.add_expression (create {BINARY_MOD}.make)
+			check_assignment
 		end
 
 	conjunc
 		do
 			my_ass.add_expression (create {BINARY_AND}.make)
+			check_assignment
 		end
 
 	disjunc
 		do
 			my_ass.add_expression (create {BINARY_OR}.make)
+			check_assignment
 		end
 
 	equal_to
 		do
 			my_ass.add_expression (create {BINARY_EQUAL}.make)
+			check_assignment
 		end
 
 	greater
 		do
 			my_ass.add_expression (create {BINARY_GREATER}.make)
+			check_assignment
 		end
 
 	less
 		do
 			my_ass.add_expression (create {BINARY_SMALLER}.make)
+			check_assignment
 		end
 
 	num_neg
@@ -203,6 +217,12 @@ feature --user commands
 			--todo
 		end
 
+	check_assignment -- if the assignment is filled, add it to class
+		do
+			if my_ass.expression_full then
+				ass := void
+			end
+		end
 feature {NONE} --helper
 	my_ass: ROUTINE_ASSIGNMENT
 		do
@@ -214,8 +234,18 @@ feature {NONE} --helper
 feature -- queries
 	out : STRING
 		do
-			create Result.make_from_string ("  ")
+			create Result.make_from_string ("")
 			Result.append (program.out)
+			if ass /= void then
+				Result.append ("%N  Routine currently being implemented: " + "{")
+				Result.append (my_ass.routine.parent_class.name + "}.")
+				Result.append (my_ass.routine.name)
+				Result.append ("%N  Assignment being specified: " + my_ass.out)
+			end
+
+			if not java_code.is_empty then
+				Result.append("%N" + java_code);
+			end
 		end
 
 end

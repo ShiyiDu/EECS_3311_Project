@@ -59,10 +59,19 @@ feature
 
 	out: STRING
 		do
-			create result.make_from_string("  " + name)
-			result.append ("%NNumber of attributes: " + attributes.count.out)
-			result.append ("%NNumber of queries:" + queries.count.out)
-			result.append ("%NNumber of commands: " + commands.count.out)
+			create result.make_from_string("    " + name)
+			result.append ("%N      Number of attributes: " + attributes.count.out)
+			across attributes is att loop
+				result.append ("%N        " + att.out)
+			end
+			result.append ("%N      Number of queries:" + queries.count.out)
+			across queries is q loop
+				result.append ("%N        " + q.out)
+			end
+			result.append ("%N      Number of commands: " + commands.count.out)
+			across commands is c loop
+				result.append ("%N        " + c.out)
+			end
 		end
 
 end

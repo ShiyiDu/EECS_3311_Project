@@ -7,6 +7,11 @@ note
 class
 	ROUTINE_ASSIGNMENT
 
+inherit
+	ANY
+		redefine out
+	end
+
 create
 	make
 
@@ -48,5 +53,24 @@ feature
 					result := e.full
 				end
 			end
+		end
+
+feature
+	out: STRING
+		local
+			printer: PRETTY_PRINTER
+			str: STRING
+		do
+			create printer.make
+			str := "?"
+			result := name + " := "
+			if exp /= void then
+				check attached exp as e then
+					e.accept (printer)
+					str := printer.print_result
+				end
+			end
+
+			result.append (str)
 		end
 end

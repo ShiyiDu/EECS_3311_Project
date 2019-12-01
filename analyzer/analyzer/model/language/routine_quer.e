@@ -7,7 +7,9 @@ note
 class
 	ROUTINE_QUERY
 inherit
-	CLASS_ROUTINE rename make as routine_make end
+	CLASS_ROUTINE
+		rename make as routine_make
+	end
 
 create
 	make
@@ -39,5 +41,6 @@ feature
 		do
 			v.visit_query (current)
 		end
+
 
 end

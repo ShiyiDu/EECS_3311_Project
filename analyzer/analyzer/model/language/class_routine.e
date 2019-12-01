@@ -6,6 +6,11 @@ note
 
 deferred class
 	CLASS_ROUTINE
+
+inherit
+	ANY
+		redefine out
+	end
 feature
 	type: STRING
 	name: STRING
@@ -37,4 +42,9 @@ feature
 		deferred
 		end
 
+feature
+	out:STRING
+		do
+			create result.make_from_string ("+ " + name + parameters.out)
+		end
 end

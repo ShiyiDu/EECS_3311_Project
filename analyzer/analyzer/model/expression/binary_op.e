@@ -7,7 +7,6 @@ note
 deferred class
 	BINARY_OP
 inherit EXPRESSION COMPOSITE
-
 feature
 	make
 		do
@@ -83,4 +82,5 @@ feature
 	accept(v: VISITOR)
 		deferred
 		end
+
 end

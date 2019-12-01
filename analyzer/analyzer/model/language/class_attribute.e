@@ -6,6 +6,10 @@ note
 
 class
 	CLASS_ATTRIBUTE
+inherit
+	ANY
+		redefine out
+	end
 create
 	make
 feature
@@ -25,4 +29,9 @@ feature
 			v.visit_attribute (current)
 		end
 
+feature
+	out:STRING
+		do
+			create result.make_from_string ("+ " + name + ": " + type)
+		end
 end
