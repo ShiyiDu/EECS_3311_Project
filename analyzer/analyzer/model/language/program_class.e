@@ -13,6 +13,8 @@ create
 feature
 	name: STRING
 	--how do I preserve the order?
+	sequence: ARRAY[TUPLE[is_att:BOOLEAN; att:detachable CLASS_ATTRIBUTE; rou:detachable CLASS_ROUTINE]]
+
 	attributes: ARRAY[CLASS_ATTRIBUTE]
 	queries: ARRAY[ROUTINE_QUERY]
 	commands: ARRAY[ROUTINE_COMMAND]
@@ -23,6 +25,8 @@ feature
 		do
 			name := new_name
 			program := program_access.program
+
+			create sequence.make_empty
 			create queries.make_empty
 			create attributes.make_empty
 			create commands.make_empty
@@ -39,18 +43,30 @@ feature
 			end
 		end
 	add_attribute(new_attribute: CLASS_ATTRIBUTE)
+		local
+			seq: TUPLE[b:BOOLEAN; a:detachable CLASS_ATTRIBUTE; c:detachable CLASS_ROUTINE]
 		do
 			attributes.force(new_attribute, attributes.count + 1)
+			seq := [true, new_attribute, void]
+			sequence.force (seq, sequence.count+1)
 		end
 
 	add_query(new_routine: ROUTINE_QUERY)
+		local
+			seq: TUPLE[b:BOOLEAN; a:detachable CLASS_ATTRIBUTE; c:detachable CLASS_ROUTINE]
 		do
 			queries.force (new_routine, queries.count + 1)
+			seq := [false, void, new_routine]
+			sequence.force (seq, sequence.count+1)
 		end
 
 	add_command(new_routine: ROUTINE_COMMAND)
+		local
+			seq: TUPLE[b:BOOLEAN; a:detachable CLASS_ATTRIBUTE; c:detachable CLASS_ROUTINE]
 		do
 			commands.force(new_routine, commands.count + 1)
+			seq := [false, void, new_routine]
+			sequence.force (seq, sequence.count+1)
 		end
 
 	accept(v:VISITOR)

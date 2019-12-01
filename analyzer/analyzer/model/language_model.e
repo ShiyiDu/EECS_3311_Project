@@ -209,12 +209,20 @@ feature --user commands
 		end
 
 	num_neg
+		local
+			neg: UNARY_OP
 		do
+			create neg.make ('-')
+			my_ass.add_expression (neg)
 			--todo
 		end
 
 	logic_neg
+		local
+			neg: UNARY_OP
 		do
+			create neg.make ('!')
+			my_ass.add_expression (neg)
 			--todo
 		end
 
@@ -250,7 +258,8 @@ feature -- queries
 				Result.append(java_code);
 				state := default_state
 			when type_checking then
-
+				--todo: print type checking result
+				state := default_state
 			else
 
 			end

@@ -58,7 +58,7 @@ feature
 				str := "?"
 			end
 
-			print_result := "( " + u.symbol.out + " " + str + ")"
+			print_result := "(" + u.symbol.out + " " + str + ")"
 
 		end
 	--------------------------------------------------------------------------------------
@@ -163,23 +163,20 @@ feature -- for language clauses
 			from
 				i := 1
 			until
-				i > c.attributes.count
+				i > c.sequence.count
 			loop
-				c.attributes[i].accept(pretty_print)
+				if c.sequence[i].is_att then
+					check attached c.sequence[i].att as att then
+						att.accept(pretty_print)
+					end
+				else
+					check attached c.sequence[i].rou as rou then
+						rou.accept(pretty_print)
+					end
+				end
 				print_result.append("%N" + pretty_print.print_result);
 				i := i + 1
 			end
-
-			from
-				i := 1
-			until
-				i > c.routines.count
-			loop
-				c.routines[i].accept(pretty_print)
-				print_result.append("%N" + pretty_print.print_result);
-				i := i + 1
-			end
-
 			print_result.append ("%N  }")
 		end
 

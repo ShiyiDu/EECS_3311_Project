@@ -16,8 +16,8 @@ feature
 
 feature
 	make(i: INTEGER)
-		require
-			value_in_range: 0 <= i and i <= 9
+--		require --???why did I do this??
+--			value_in_range: 0 <= i and i <= 9
 		do
 			value := i
 		end
@@ -30,7 +30,7 @@ feature
 		end
 	fill(exp: EXPRESSION)
 		do
-			
+
 		end
 
 	full: BOOLEAN
