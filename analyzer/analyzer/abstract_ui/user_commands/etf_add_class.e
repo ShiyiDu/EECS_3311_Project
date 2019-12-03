@@ -8,8 +8,13 @@ class
 	ETF_ADD_CLASS
 inherit
 	ETF_ADD_CLASS_INTERFACE
+
+
 create
 	make
+
+feature
+	ec:ERROR_CHECKER
 feature -- command
 	add_class(cn: STRING)
 		require else
