@@ -33,7 +33,7 @@ feature
 	out: STRING
 		do
 			create Result.make_from_string ("")
-			Result.append ("Number of classes being specified: " + classes.count.out)
+			Result.append ("%N  Number of classes being specified: " + classes.count.out)
 			across classes is c loop
 				Result.append( "  %N" + c.out)
 			end

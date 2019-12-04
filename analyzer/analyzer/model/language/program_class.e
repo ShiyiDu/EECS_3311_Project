@@ -35,11 +35,13 @@ feature
 	routines: ARRAY[CLASS_ROUTINE]
 		do
 			create result.make_empty
-			across queries is q loop
-				result.force(q, result.count+1)
-			end
-			across commands is c loop
-				result.force (c, result.count+1)
+			--must maintain the sequence order
+			across sequence is tup loop
+				if not tup.is_att then
+					check attached tup.rou as r then
+						result.force(r, result.count + 1)
+					end
+				end
 			end
 		end
 	add_attribute(new_attribute: CLASS_ATTRIBUTE)

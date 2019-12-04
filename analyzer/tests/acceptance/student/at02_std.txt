@@ -16,3 +16,33 @@ add_command("haha", "ca", <<>>)
 add_query("B","cb",<<["INTEGER", "A"], ["BOOLEAN", "B"]>>,"haha")
 add_query("A","cb",<<["INTEGER", "A"], ["BOOLEAN", "B"]>>,"haha")
 add_query("A", "get", <<>>, "hah")
+
+--
+add_class("A")
+add_command("A", "set_b", <<["int", "INTEGER"]>>)
+add_assignment_instruction("A", "set_b", "int")
+add_call_chain(<<"int">>)
+add_assignment_instruction("A", "set_b", "int")
+add_call_chain(<<"in">>)
+type_check
+generate_java_code
+
+add_class("B")
+add_command("B", "set_b", <<>>)
+add_assignment_instruction("B", "set_b", "c")
+add_call_chain(<<"a">>)
+type_check
+generate_java_code
+add_query("A", "get_b", <<>>, "BOOLEAN")
+add_command("A", "set_a", <<>>)
+add_assignment_instruction("A", "get_b", "a")
+add_call_chain(<<"haha">>)
+add_assignment_instruction("A", "set_a", "d")
+add_call_chain(<<"h">>)
+generate_java_code
+type_check
+add_assignment_instruction("A", "get_b", "c")
+add_call_chain(<<"no">>)
+type_check
+add_query("A", "get_c", <<>>, "B")
+generate_java_code

@@ -187,7 +187,7 @@ feature -- for language clauses
 			create pretty_print.make
 			--name + '=' + expression
 			if a.exp = void then
-				print_result := "      " + a.name + " = null;"
+				print_result := "      " + a.name + " = ?;"
 			else
 				check attached a.exp as exp then
 					exp.accept(pretty_print)

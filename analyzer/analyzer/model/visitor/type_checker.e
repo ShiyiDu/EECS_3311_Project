@@ -14,11 +14,13 @@ create
 
 feature
 	value: BOOLEAN
+	error_msg: STRING
 
 feature
 	make
 		do
 			value := false
+			create error_msg.make_empty
 			create type.make_empty
 		end
 
@@ -43,28 +45,73 @@ feature
 			value := true
 			create checker.make
 
-			if u.exp /= void then
-				u.exp_instance.accept(checker)
+			if u.symbol ~ '!' then
+				type := "BOOLEAN"
 			else
-				--todo: error?	
+				type := "INTEGER"
 			end
-			type := checker.type
+
+			u.exp_instance.accept(checker)
+			if type ~ checker.type then
+				value := true
+			else
+				value := false
+			end
 		end
 
 	visit_call_chain(c: CALL_CHAIN)
 		local
 			current_class: PROGRAM_CLASS --the current class being accessing and checking
 			current_routine: CLASS_ROUTINE
+			class_name: STRING
+			i: INTEGER
 		do
 			current_class := c.get_ass.routine.parent_class
 			current_routine := c.get_ass.routine;
 			--the first one checks for both attributes and parameters
-
-			if program_access.contain_attribute (current_class, c.chain[1]) then
-				current_class := program_access.get_attribute_type (current_class, c.chain[1])
+			value := true
+			i := 1
+			--if parameter exist, skip i to 2 and change class to the coresponding one
+			if program_access.contain_parameter (current_routine, c.chain[i]) then
+				class_name := program_access.get_parameter_type (current_routine, c.chain[i])
+				if class_name ~ "BOOLEAN" or class_name ~ "INTEGER" then
+					--the call chain should end here
+					if c.chain.count > i then
+						value := false
+					else
+						type := class_name
+					end
+					i := c.chain.count + 1 --skip the loop
+				else
+					current_class := program_access.get_class (class_name)
+					i := 2
+				end
 			end
 
-			--todo: you need to find if there is an attribute in the class fields
+			from
+			until
+				i > c.chain.count
+			loop
+				if program_access.contain_attribute (current_class, c.chain[i]) then
+					class_name := program_access.get_parameter_type (current_routine, c.chain[i])
+					if class_name ~ "BOOLEAN" or class_name ~ "INTEGER" then
+						--the call chain should end here
+						if c.chain.count > i then
+							value := false
+						else
+							type := class_name
+						end
+						i := c.chain.count + 1 --skip the loop
+					else
+						current_class := program_access.get_class (class_name)
+					end
+				else
+					value := false
+					i := c.chain.count + 1 --skip the loop
+				end
+
+				i := i + 1
+			end
 		end
 
 	visit_addition(a: BINARY_ADD)
@@ -132,7 +179,13 @@ feature --language clauses
 			create type_check.make
 			across p.classes is c loop
 				c.accept(type_check)
-				value := type_check.value and value
+				if not type_check.value then
+					value := false
+					error_msg.append ("%N  class " + c.name + " is not type-correct:")
+					error_msg.append (type_check.error_msg)
+				else
+					error_msg.append ("%N  class " + c.name + " is type-correct:")
+				end
 			end
 		end
 
@@ -143,14 +196,13 @@ feature --language clauses
 			value := true
 			create type_check.make
 			--all attributes type correct, all routine type correct
-			across c.queries is r loop
-				r.accept(type_check)
-				value := type_check.value and value
-			end
 
-			across c.commands is r loop
+			across c.routines is r loop
 				r.accept(type_check)
-				value := type_check.value and value
+				if not type_check.value then
+					value := false
+					error_msg.append (type_check.error_msg)
+				end
 			end
 
 		end
@@ -203,13 +255,21 @@ feature {TYPE_CHECKER} --helper method
 	visit_routine(r: CLASS_ROUTINE)
 		local
 			ass_check: TYPE_CHECKER
+			printer: PRETTY_PRINTER
 		do
 			--check for every assignment for correctness
 			create ass_check.make
+			create printer.make
 			value := true
 			across r.assignments is ass loop
 				ass.accept(ass_check)
-				value := value and ass_check.value
+				if not ass_check.value then
+					ass.accept(printer)
+					printer.print_result.remove_tail (1)
+					printer.print_result.remove_head (2)
+					error_msg.append ("%N" + printer.print_result + " in routine " + r.name + " is not type-correct.")
+					value := false
+				end
 			end
 		end
 
@@ -228,26 +288,8 @@ feature {TYPE_CHECKER} --helper method
 				end
 			end
 
-
-			value := left.type ~ right.type
-
-	------------------------------ changes (not sure) ----------------------------------------
 			value := (left.type ~ t) and (right.type ~ t)
-	-------------------------------------------------------------------------------
+
 		end
-
----------------------------------- changes (not sure)----------------------------------	
---	visit_logical(a: BINARY_OP)
---	local
---		left, right: TYPE_CHECKER
---	do
---		create {TYPE_CHECKER} left.make
---		create {TYPE_CHECKER} right.make
---		a.left.accept(left)
---		a.right.accept(right)
---	    value := (left.type ~ "bool") and (right.type ~ "bool")
---	end
-
--------------------------------------------------------------------------------------	
 
 end

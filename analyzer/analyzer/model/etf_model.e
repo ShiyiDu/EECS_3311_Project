@@ -22,6 +22,7 @@ feature {NONE} -- Initialization
 		do
 			program := program_access.program
 			state := 1
+			error_msg := "OK."
 			create pretty_printer.make
 			create type_checker.make
 			create java_code.make_empty
@@ -41,6 +42,12 @@ feature -- model attributes
 	generate_code: INTEGER = 2
 	type_checking: INTEGER = 3
 
+	error_msg: STRING
+	set_error(msg: STRING)
+		do
+			error_msg := msg
+		end
+
 	ass: detachable ROUTINE_ASSIGNMENT -- the current assignment to be filled
 feature -- model operations
 	reset
@@ -52,6 +59,7 @@ feature --user commands
 	type_check
 		do
 			--todo
+			state := type_checking
 		end
 
 	generate_java_code
@@ -244,9 +252,11 @@ feature -- queries
 	out : STRING
 		do
 			create Result.make_from_string ("")
-
+			type_checker.make
 			inspect state
 			when default_state then
+				Result.append ("  Status: " + error_msg)
+				error_msg := "OK."
 				Result.append (program.out)
 				if ass /= void then
 					Result.append ("%N  Routine currently being implemented: " + "{")
@@ -259,6 +269,11 @@ feature -- queries
 				state := default_state
 			when type_checking then
 				--todo: print type checking result
+
+				program.accept (type_checker)
+
+				Result.append (type_checker.error_msg)
+				Result.remove (1)
 				state := default_state
 			else
 

@@ -10,6 +10,17 @@ inherit
 	ETF_ADD_ASSIGNMENT_INSTRUCTION_INTERFACE
 create
 	make
+
+feature {NONE}
+	pre_cond(cn: STRING; fn: STRING; n:STRING): BOOLEAN
+		do
+			result :=
+				not checker.specifying_assignment
+				and checker.class_exists (cn)
+				and checker.feature_exists (cn, fn)
+				and not checker.feature_is_attribute (cn, fn)
+		end
+
 feature -- command
 	add_assignment_instruction(cn: STRING ; fn: STRING ; n: STRING)
 		require else
