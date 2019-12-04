@@ -5,10 +5,10 @@ note
 	revision: "$Revision$"
 
 expanded class
-	LANGUAGE_MODEL_ACCESS
+	ETF_MODEL_ACCESS
 
 feature
-	m: LANGUAGE_MODEL
+	m: ETF_MODEL
 		once
 			create Result.make
 		end

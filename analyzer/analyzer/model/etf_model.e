@@ -5,7 +5,7 @@ note
 	revision: "$Revision$"
 
 class
-	LANGUAGE_MODEL
+	ETF_MODEL
 
 inherit
 	ANY
@@ -13,7 +13,7 @@ inherit
 			out
 		end
 
-create {LANGUAGE_MODEL_ACCESS}
+create {ETF_MODEL_ACCESS}
 	make
 
 feature {NONE} -- Initialization
@@ -232,7 +232,7 @@ feature --user commands
 				ass := void
 			end
 		end
-feature {NONE} --helper
+feature {ERROR_CHECKER} --helper
 	my_ass: ROUTINE_ASSIGNMENT
 		do
 			check attached ass as a then
