@@ -1,0 +1,18 @@
+add_class("A")
+add_command("A", "ca", <<["a", "ds"], ["d", "hapy"]>>)
+add_command("A","ca",<<["A", "INTEGER"], ["B", "BOOLEAN"]>>)
+add_command("A","ca",<<["A", "INTEGER"], ["A", "BOOLEAN"]>>)
+
+add_class("A")
+add_command("A", "ca", <<["a", "ds"], ["d", "hapy"]>>)
+add_command("A", "ca", <<["a", "ds"], ["d", "INTEGER"]>>) 
+add_command("A", "ca", <<["INTEGER", "INTEGER"]>>)
+
+add_class("A")
+add_command("A", "ca", <<["a", "INTEGER"], ["a", "BOOLEAN"]>>)
+add_command("A", "ca", <<["a", "INTEGER"], ["a", "BOOLEAN"], ["b", "BOOLEAN"], ["b", "BOOLEAN"]>>)
+add_command("A", "ca", <<["a", "INTEGER"], ["a", "BOOLEAN"], ["a", "BOOLEAN"]>>)
+add_command("haha", "ca", <<>>)
+add_query("B","cb",<<["INTEGER", "A"], ["BOOLEAN", "B"]>>,"haha")
+add_query("A","cb",<<["INTEGER", "A"], ["BOOLEAN", "B"]>>,"haha")
+add_query("A", "get", <<>>, "hah")

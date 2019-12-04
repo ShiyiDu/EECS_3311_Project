@@ -11,6 +11,21 @@ deferred class
 --		undefine out
 --	end
 feature --public features, they should not be changed
+
+	ass: detachable ROUTINE_ASSIGNMENT
+
+	set_ass(new_ass: ROUTINE_ASSIGNMENT)
+		do
+			ass := new_ass
+		end
+
+	get_ass: ROUTINE_ASSIGNMENT
+		do
+			check attached ass as a then
+				result := a
+			end
+		end
+
 	accept(v: VISITOR)
 		deferred
 		end

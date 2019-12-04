@@ -36,6 +36,7 @@ feature
 		require
 			can_be_filled: not expression_full
 		do
+			expression.set_ass (current)
 			if exp = void then
 				exp := expression
 			else

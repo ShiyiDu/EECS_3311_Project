@@ -52,8 +52,18 @@ feature
 		end
 
 	visit_call_chain(c: CALL_CHAIN)
+		local
+			current_class: PROGRAM_CLASS --the current class being accessing and checking
+			current_routine: CLASS_ROUTINE
 		do
-			value := true
+			current_class := c.get_ass.routine.parent_class
+			current_routine := c.get_ass.routine;
+			--the first one checks for both attributes and parameters
+
+			if program_access.contain_attribute (current_class, c.chain[1]) then
+				current_class := program_access.get_attribute_type (current_class, c.chain[1])
+			end
+
 			--todo: you need to find if there is an attribute in the class fields
 		end
 
@@ -151,9 +161,11 @@ feature --language clauses
 		do
 			--todo: the expression is type correct and matches the type of name
 			create exp_check.make
-			a.accept(exp_check)
+			check attached a.exp as e then
+				e.accept (exp_check)
+			end
 
-			--check parameter in routine
+			--check parameter in routine and attribute in the corrsponding class
 			if program_access.contain_parameter(a.routine, a.name) then
 				type := program_access.get_parameter_type(a.routine, a.name)
 				value := exp_check.type ~ type
@@ -165,30 +177,42 @@ feature --language clauses
 			end
 			end
 
-			--check attribute in class
-
-
 		end
 
 	visit_command(c: ROUTINE_COMMAND)
 		do
-			--todo
+			visit_routine(c)
 		end
 
 	visit_parameters(p: ROUTINE_PARAMETERS)
 		do
 			--todo
+			value := true
 		end
 
 	visit_query(q: ROUTINE_QUERY)
 		do
-			--todo
+			visit_routine(q)
 		end
 
 feature {TYPE_CHECKER} --helper method
 	type: STRING --int, boolean, void, name
 
 	program_access: PROGRAM_ACCESS
+
+	visit_routine(r: CLASS_ROUTINE)
+		local
+			ass_check: TYPE_CHECKER
+		do
+			--check for every assignment for correctness
+			create ass_check.make
+			value := true
+			across r.assignments is ass loop
+				ass.accept(ass_check)
+				value := value and ass_check.value
+			end
+		end
+
 
 	visit_binary(a:BINARY_OP; t:STRING)
 		local

@@ -25,7 +25,7 @@ feature{NONE}
 		end
 	etf_access: ETF_MODEL_ACCESS
 feature
-	error_msg: STRING
+	error_msg: STRING --these are only potential error messages, having one doesn't necessarily mean an error
 
 feature
 	default_create
@@ -52,27 +52,31 @@ feature --enquires
 		end
 
 	class_exists(cn:STRING): BOOLEAN -- to check if the class contains the cn
-		local
-			temp_str: STRING
 		do
-			create temp_str.make_empty
 			if program_access.contain_class (cn)
 			then
 				Result := True
-				temp_str := "Error (" + cn + " is already an existing class name)."
-				-- error_msg := temp_str
+				error_msg := "Error (" + cn + " is already an existing class name)."
 			else
+				error_msg := "Error (" + cn + " is not an existing class name)."
 				Result := False
 			end
 		end
 
-	routine_exists(c: PROGRAM_CLASS; name: STRING): BOOLEAN
+	feature_exists(class_name: STRING; name: STRING): BOOLEAN
+		require
+		 	class_exist: class_exists(class_name)
+		local
+			c: PROGRAM_CLASS
 		do
+			c := program_access.get_class (class_name)
+
 			if
 				program_access.contain_routine (c, name)
+				or program_access.contain_attribute (c, name)
 			then
 				Result := True -- feature already exists
-				-- error_msg := "Error (" + name + " is already an existing feature name in class " + c.name + ")"
+				error_msg := "Error (" + name + " is already an existing feature name in class " + class_name + ")"
 			else
 				Result := False -- feature doesn't exist
 			end
@@ -80,49 +84,45 @@ feature --enquires
 
 	name_clash(class_name:STRING; pars:ARRAY[TUPLE[name:STRING;type:STRING]])
 		local
-			temp_arr: ARRAY[STRING]
-
+			clashes: ARRAY[STRING]
 		do
-			create temp_arr.make_empty
+			create clashes.make_empty
 			    -- store all the clashed feature name
-			across pars.lower |..| pars.upper is i
-			loop
-				if program_access.contain_class (pars[i].name) or pars[i].name ~ "INTEGER" or pars[i].name ~ "INTEGER"
+			across pars is tup loop
+				if program_access.contain_class (tup.name) or tup.name ~ "INTEGER" or tup.name ~ "BOOLEAN"
 				then
-					temp_arr.force (pars[i].name, temp_arr.count+1)
+					clashes.force (tup.name, clashes.count + 1)
 				end
-
 			end
 
-			-- error_msg := "Error (Parameter names clash with existing classes: " + generate_string(temp_arr) + ")."
+			error_msg := "Error (Parameter names clash with existing classes: " + generate_string(clashes) + ")."
 		end
 
-	repeated_parameter(pars:ARRAY[TUPLE[name:STRING;type:STRING]]): BOOLEAN
+	duplicated_parameter(pars:ARRAY[TUPLE[name:STRING;type:STRING]]): BOOLEAN
 		local
-			temp_arr: ARRAY[STRING] -- temperely store the non-existing name
-			temp_arr2:ARRAY[STRING] -- if name exists in temp_arr, then add to temp_arr2
-			temp_string: STRING
+			name_appeared: ARRAY[STRING] -- all the names appeared so far
+			duplicates:ARRAY[STRING] -- the duplicated name
 		do
-			create temp_arr.make_empty
-			create temp_arr2.make_empty
-			across pars.lower |..| pars.upper is j
-				loop
-			 		if (not temp_arr.has(pars[j].name))
-			 		then
-			 		temp_arr.force(pars[j].name, temp_arr.count+1)
-			 	else
-			 		temp_arr2.force(pars[j].name, temp_arr2.count+1)
+			create name_appeared.make_empty
+			name_appeared.compare_objects
+			create duplicates.make_empty
+			duplicates.compare_objects
 
-			 	end
-
+			across pars is tup loop
+				if name_appeared.has (tup.name) then
+					if not duplicates.has (tup.name) then
+						duplicates.force (tup.name, duplicates.count + 1)
+					end
+				end
+				name_appeared.force (tup.name, name_appeared.count + 1)
 			end
-			if temp_arr2.count ~ 0
-			then
+
+			if duplicates.count /~ 0 then
 			 	Result := True
+			 	error_msg := "Error (Parameter names clash with existing classes: " + generate_string(duplicates)+ ")."
+			else
+				Result := false
 			end
-
-		-- error_msg := "Error (Parameter names clash with existing classes: " + generate_string(temp_arr2)+ ")."
-
 
 		end
 
@@ -146,7 +146,46 @@ feature --enquires
 			end
 		end
 
-	-- return_type_error()
+	type_not_exist(name: STRING): BOOLEAN
+		do
+			if not(program_access.contain_class (name) or name ~ "INTEGER" or name ~ "BOOLEAN") then
+				result := true
+				error_msg := "Error (Return type does not refer to a primitive type or an existing class: " + name + ")."
+			else
+				result := false
+			end
+		end
+
+	feature_not_exist(class_name: STRING; feature_name: STRING): BOOLEAN
+		local
+			c: PROGRAM_CLASS
+		do
+			c := program_access.get_class (class_name)
+			if program_access.contain_routine (c, feature_name) then
+				result := false
+			else
+				result := true
+				error_msg := "Error (" + feature_name + " is not an existing feature name in class " + class_name + ")."
+			end
+		end
+
+	feature_is_attribute(class_name: STRING; feature_name: STRING): BOOLEAN
+		local
+			c: PROGRAM_CLASS
+		do
+			result := false
+			c := program_access.get_class (class_name)
+			if program_access.contain_attribute (c, feature_name) then
+				result := true
+				error_msg := "Error (Attribute " + feature_name + " in class " + class_name + " cannot be specified with an implementation)."
+			end
+		end
+
+	empty_call_chain(chain: ARRAY[STRING]): BOOLEAN
+		do
+			result := chain.is_empty
+			error_msg := "Error (Call chain is empty)."
+		end
 
 
 feature{NONE} -- helper features
