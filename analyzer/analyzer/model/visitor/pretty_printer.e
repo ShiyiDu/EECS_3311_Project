@@ -238,11 +238,13 @@ feature -- for language clauses
 					i = p.count
 				loop
 					assignment := p.get_parameter(i)
-					print_result.append(out_type(assignment.type) + " " + assignment.name + " , ")
+					print_result.append(out_type(assignment.type) + " " + assignment.name + ", ")
 					i := i + 1
 				end
 				assignment := p.get_parameter(i)
 				print_result.append(out_type(assignment.type) + " " + assignment.name + ")")
+			else
+				print_result := "()"
 			end
 		end
 

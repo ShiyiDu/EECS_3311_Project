@@ -34,7 +34,7 @@ feature -- model attributes
 	program_access : PROGRAM_ACCESS
 	pretty_printer : PRETTY_PRINTER
 	type_checker: TYPE_CHECKER
-
+	error_checker: ERROR_CHECKER
 	java_code: STRING
 
 	state: INTEGER
@@ -57,6 +57,8 @@ feature -- model operations
 		end
 feature --user commands
 	type_check
+		require
+			not error_checker.specifying_assignment
 		do
 			--todo
 			state := type_checking
@@ -72,6 +74,9 @@ feature --user commands
 		end
 
 	add_class(cn: STRING)
+		require
+			not error_checker.specifying_assignment
+			and not error_checker.class_exists (cn)
 		local
 			new: PROGRAM_CLASS
 		do
@@ -80,6 +85,11 @@ feature --user commands
 		end
 
 	add_attribute(cn:STRING; fn:STRING; ft:STRING)
+		require
+			not error_checker.specifying_assignment
+			and error_checker.class_exists (cn)
+			and not error_checker.feature_exists (cn, fn)
+			and not error_checker.type_not_exist (ft)
 		local
 			att: CLASS_ATTRIBUTE
 			cl: PROGRAM_CLASS
@@ -90,6 +100,13 @@ feature --user commands
 		end
 
 	add_command(class_name:STRING; feature_name:STRING; pars:ARRAY[TUPLE[name:STRING;type:STRING]])
+		require
+			not error_checker.specifying_assignment
+			and error_checker.class_exists (class_name)
+			and not error_checker.feature_exists (class_name, feature_name)
+			and not error_checker.name_clash (class_name, pars)
+			and not error_checker.duplicated_parameter (pars)
+			and not error_checker.par_type_not_exist (pars)
 		local
 			com: ROUTINE_COMMAND
 			cl: PROGRAM_CLASS
@@ -105,6 +122,14 @@ feature --user commands
 		end
 
 	add_query(cn: STRING; fn: STRING; pars:ARRAY[TUPLE[name:STRING;type:STRING]]; rt: STRING)
+		require
+			not error_checker.specifying_assignment
+			and error_checker.class_exists (cn)
+			and not error_checker.feature_exists (cn, fn)
+			and not error_checker.name_clash (cn, pars)
+			and not error_checker.duplicated_parameter (pars)
+			and not error_checker.par_type_not_exist (pars)
+			and not error_checker.type_not_exist (rt)
 		local
 			que: ROUTINE_QUERY
 			cl: PROGRAM_CLASS
@@ -120,6 +145,11 @@ feature --user commands
 		end
 
 	add_assignment_instruction(cn: STRING; fn: STRING; n: STRING)
+		require
+			not error_checker.specifying_assignment
+			and error_checker.class_exists (cn)
+			and error_checker.feature_exists (cn, fn)
+			and not error_checker.feature_is_attribute (cn, fn)
 		local
 			cl: PROGRAM_CLASS
 			routine: CLASS_ROUTINE
@@ -134,8 +164,8 @@ feature --user commands
 
 	add_call_chain(chain: ARRAY[STRING])
 		require
-			have_ass:
-				ass /= void
+			error_checker.specifying_assignment
+			and not error_checker.empty_call_chain (chain)
 		local
 			new_chain: CALL_CHAIN
 		do
@@ -149,6 +179,8 @@ feature --user commands
 		end
 
 	bool_value(c: BOOLEAN)
+		require
+			error_checker.specifying_assignment
 		local
 			new_exp: BOOL_CONST
 		do
@@ -158,6 +190,8 @@ feature --user commands
 		end
 
 	int_value(c: INTEGER)
+		require
+			error_checker.specifying_assignment
 		local
 			new_int: INT_CONST
 		do
@@ -167,56 +201,78 @@ feature --user commands
 		end
 
 	add
+		require
+			error_checker.specifying_assignment
 		do
 			my_ass.add_expression (create {BINARY_ADD}.make)
 		end
 
 	sub
+		require
+			error_checker.specifying_assignment
 		do
 			my_ass.add_expression (create {BINARY_SUB}.make)
 		end
 
 	mult
+		require
+			error_checker.specifying_assignment
 		do
 			my_ass.add_expression (create {BINARY_MULT}.make)
 		end
 
 	div --quotient
+		require
+			error_checker.specifying_assignment
 		do
 			my_ass.add_expression (create {BINARY_DIV}.make)
 		end
 
 	mod
+		require
+			error_checker.specifying_assignment
 		do
 			my_ass.add_expression (create {BINARY_MOD}.make)
 		end
 
 	conjunc
+		require
+			error_checker.specifying_assignment
 		do
 			my_ass.add_expression (create {BINARY_AND}.make)
 		end
 
 	disjunc
+		require
+			error_checker.specifying_assignment
 		do
 			my_ass.add_expression (create {BINARY_OR}.make)
 		end
 
 	equal_to
+		require
+			error_checker.specifying_assignment
 		do
 			my_ass.add_expression (create {BINARY_EQUAL}.make)
 		end
 
 	greater
+		require
+			error_checker.specifying_assignment
 		do
 			my_ass.add_expression (create {BINARY_GREATER}.make)
 		end
 
 	less
+		require
+			error_checker.specifying_assignment
 		do
 			my_ass.add_expression (create {BINARY_SMALLER}.make)
 		end
 
 	num_neg
+		require
+			error_checker.specifying_assignment
 		local
 			neg: UNARY_OP
 		do
@@ -226,6 +282,8 @@ feature --user commands
 		end
 
 	logic_neg
+		require
+			error_checker.specifying_assignment
 		local
 			neg: UNARY_OP
 		do

@@ -153,13 +153,11 @@
       Number of commands: 1
         + set_i(INTEGER, INTEGER)
 ->type_check
-  class A is not type-correct:
-    i = ((1 + 2) * 3) in routine set_i is not type-correct.
-    i = (i + (x - y)) in routine set_i is not type-correct.
+  class A is type-correct.
 ->generate_java_code
   class A {
     int i;
-    void set_i(int x , int y) {
+    void set_i(int x, int y) {
       i = ((1 + 2) * 3);
       i = (i + (x - y));
     }

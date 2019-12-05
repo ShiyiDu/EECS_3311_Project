@@ -193,7 +193,7 @@ feature --language clauses
 					error_msg.append ("%N  class " + c.name + " is not type-correct:")
 					error_msg.append (type_check.error_msg)
 				else
-					error_msg.append ("%N  class " + c.name + " is type-correct:")
+					error_msg.append ("%N  class " + c.name + " is type-correct.")
 				end
 			end
 		end
@@ -236,17 +236,19 @@ feature --language clauses
 			if program_access.contain_parameter(a.routine, a.name) then
 				type := program_access.get_parameter_type(a.routine, a.name)
 				if not a.null then
-					value := exp_check.type ~ type and value
+					value := (exp_check.type ~ type) and value
 				else
 					value := true
 				end
 			else if program_access.contain_attribute(a.routine.parent_class, a.name) then
 				type := program_access.get_attribute_type(a.routine.parent_class, a.name)
 				if not a.null then
-					value := exp_check.type ~ type and value
+					value := (exp_check.type ~ type) and value
 				else
 					value := true
 				end
+			else
+				value := false
 			end
 			end
 
@@ -312,7 +314,7 @@ feature {TYPE_CHECKER} --helper method
 			end
 
 			value := (left.type ~ t) and (right.type ~ t)
-
+			type := t
 		end
 
 end
