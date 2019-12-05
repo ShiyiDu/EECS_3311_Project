@@ -70,7 +70,7 @@ feature --query
 			create result.make_empty
 			across c.attributes is att loop
 				if att.name ~ name then
-					result := att.name
+					result := att.type
 				end
 			end
 		end

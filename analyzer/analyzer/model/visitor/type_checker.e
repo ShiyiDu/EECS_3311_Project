@@ -94,7 +94,7 @@ feature
 				i > c.chain.count
 			loop
 				if program_access.contain_attribute (current_class, c.chain[i]) then
-					class_name := program_access.get_parameter_type (current_routine, c.chain[i])
+					class_name := program_access.get_attribute_type (current_class, c.chain[i])
 					if class_name ~ "BOOLEAN" or class_name ~ "INTEGER" then
 						--the call chain should end here
 						if c.chain.count > i then
