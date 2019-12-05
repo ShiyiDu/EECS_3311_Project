@@ -88,6 +88,10 @@ feature
 
 			result.remove_tail (2);
 			result.append (")")
+
+			if count = 0 then
+				result := ""
+			end
 		end
 
 invariant

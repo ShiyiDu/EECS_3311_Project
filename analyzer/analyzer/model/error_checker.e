@@ -45,7 +45,7 @@ feature --enquires
 				--an assignment being specifying
 				r := etf.my_ass.routine.name
 				c := etf.my_ass.routine.parent_class.name
-				error_msg := "Error (An assignment instruction is currently being specified for routine " + r +"in class " + c + ")."
+				error_msg := "Error (An assignment instruction is currently being specified for routine " + r +" in class " + c + ")."
 			else
 				error_msg := "Error (An assignment instruction is not currently being specified)."
 			end
@@ -102,7 +102,7 @@ feature --enquires
 
 			if duplicates.count /~ 0 then
 			 	Result := True
-			 	error_msg := "Error (Parameter names clash with existing classes: " + generate_string(duplicates)+ ")."
+			 	error_msg := "Error (Duplicated parameter names: " + generate_string(duplicates)+ ")."
 			else
 				Result := false
 			end
@@ -125,7 +125,7 @@ feature --enquires
 
 			if temp_arr.count > 0 then
 				Result := True
-				error_msg := "Error (Parameter types do not refer to primitive types or existing classes: " + generate_string(temp_arr) + " )."
+				error_msg := "Error (Parameter types do not refer to primitive types or existing classes: " + generate_string(temp_arr) + ")."
 			end
 		end
 

@@ -44,7 +44,13 @@ feature
 
 feature
 	out:STRING
+		local
+			type_out: STRING
 		do
-			create result.make_from_string ("+ " + name + parameters.out)
+			create type_out.make_empty
+			if type /~ "void" then
+				type_out := ": " + type
+			end
+			create result.make_from_string ("+ " + name + parameters.out + type_out)
 		end
 end
