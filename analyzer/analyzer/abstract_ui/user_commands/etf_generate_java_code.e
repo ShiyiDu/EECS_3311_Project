@@ -14,6 +14,7 @@ feature -- command
 	generate_java_code
     	do
 			-- perform some update on the model state
+			--no pre-condition required, you can generate java code any time you want
 			model.generate_java_code
 			etf_cmd_container.on_change.notify ([Current])
     	end

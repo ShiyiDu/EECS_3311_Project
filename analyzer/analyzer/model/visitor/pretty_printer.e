@@ -187,7 +187,11 @@ feature -- for language clauses
 			create pretty_print.make
 			--name + '=' + expression
 			if a.exp = void then
-				print_result := "      " + a.name + " = ?;"
+				if a.null then
+					print_result := "      " + a.name + " = null;"
+				else
+					print_result := "      " + a.name + " = ?;"
+				end
 			else
 				check attached a.exp as exp then
 					exp.accept(pretty_print)
@@ -257,10 +261,16 @@ feature -- for language clauses
 				i > q.assignments.count
 			loop
 				q.assignments[i].accept(pretty_print)
-				print_result.append("%N" + pretty_print.print_result)
+				if i ~ 1 then
+					pretty_print.print_result.remove_head (6)
+					print_result.append("%N      " + out_type(q.type) + " " + pretty_print.print_result)
+				else
+					print_result.append("%N" + pretty_print.print_result)
+				end
+
 				i := i + 1
 			end
-			print_result.append("return Result;%N")
+			print_result.append("%N      return Result;")
 			print_result.append("%N    }")
 		end
 
@@ -270,7 +280,7 @@ feature {NONE}-- query
 			if actual ~ "INTEGER" then
 				result := "int"
 			else if actual ~ "BOOLEAN" then
-				result := "boolean"
+				result := "bool"
 			else
 				result := actual
 			end end

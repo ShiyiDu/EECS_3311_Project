@@ -22,16 +22,15 @@ feature
 		do
 			routine_make(new_type, new_name, new_class)
 
-			new_type.compare_objects
-
-			if new_type ~ "int" then
+			if new_type ~ "INTEGER" then
 				create zero.make (0)
 				create default_assign.make ("Result", zero, current)
-			else if new_type ~ "bool" then
+			else if new_type ~ "BOOLEAN" then
 				create false_value.make (false)
 				create default_assign.make ("Result", false_value, current)
 			else
 				create default_assign.make ("Result", void, current)
+				default_assign.set_null
 			end end
 			assignments.force (default_assign, assignments.count+1)
 		end

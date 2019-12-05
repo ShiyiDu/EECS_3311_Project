@@ -63,26 +63,7 @@ feature --enquires
 			end
 		end
 
-	feature_exists(class_name: STRING; name: STRING): BOOLEAN
-		require
-		 	class_exist: class_exists(class_name)
-		local
-			c: PROGRAM_CLASS
-		do
-			c := program_access.get_class (class_name)
-
-			if
-				program_access.contain_routine (c, name)
-				or program_access.contain_attribute (c, name)
-			then
-				Result := True -- feature already exists
-				error_msg := "Error (" + name + " is already an existing feature name in class " + class_name + ")"
-			else
-				Result := False -- feature doesn't exist
-			end
-		end
-
-	name_clash(class_name:STRING; pars:ARRAY[TUPLE[name:STRING;type:STRING]])
+	name_clash(class_name:STRING; pars:ARRAY[TUPLE[name:STRING;type:STRING]]): BOOLEAN
 		local
 			clashes: ARRAY[STRING]
 		do
@@ -94,6 +75,8 @@ feature --enquires
 					clashes.force (tup.name, clashes.count + 1)
 				end
 			end
+
+			result := clashes.count > 0
 
 			error_msg := "Error (Parameter names clash with existing classes: " + generate_string(clashes) + ")."
 		end
@@ -156,18 +139,38 @@ feature --enquires
 			end
 		end
 
-	feature_not_exist(class_name: STRING; feature_name: STRING): BOOLEAN
+	feature_exists(class_name: STRING; feature_name: STRING): BOOLEAN
+		require
+		 	class_exist: class_exists(class_name)
 		local
 			c: PROGRAM_CLASS
 		do
 			c := program_access.get_class (class_name)
-			if program_access.contain_routine (c, feature_name) then
-				result := false
+
+			if
+				program_access.contain_routine (c, feature_name)
+				or program_access.contain_attribute (c, feature_name)
+			then
+				Result := True -- feature already exists
+				error_msg := "Error (" + feature_name + " is already an existing feature name in class " + class_name + ")."
 			else
-				result := true
+				Result := False -- feature doesn't exist
 				error_msg := "Error (" + feature_name + " is not an existing feature name in class " + class_name + ")."
 			end
 		end
+
+--	feature_not_exist(class_name: STRING; feature_name: STRING): BOOLEAN
+--		local
+--			c: PROGRAM_CLASS
+--		do
+--			c := program_access.get_class (class_name)
+--			if program_access.contain_routine (c, feature_name) then
+--				result := false
+--			else
+--				result := true
+--				error_msg := "Error (" + feature_name + " is not an existing feature name in class " + class_name + ")."
+--			end
+--		end
 
 	feature_is_attribute(class_name: STRING; feature_name: STRING): BOOLEAN
 		local

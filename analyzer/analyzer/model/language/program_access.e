@@ -78,13 +78,22 @@ feature --query
 	contain_parameter(routine: CLASS_ROUTINE; name: STRING) : BOOLEAN
 		do
 			result := routine.parameters.contain(name)
+			--
+			if routine.type /~ "void" and name ~ "Result" then
+				result := true
+			end
 		end
 
 	get_parameter_type(routine: CLASS_ROUTINE; name: STRING) : STRING
 		require
 			parameter_exists: contain_parameter(routine, name)
 		do
-			result := routine.parameters.get_type(name)
+
+			if routine.type /~ "void" and name ~ "Result" then
+				result := routine.type
+			else
+				result := routine.parameters.get_type(name)
+			end
 		end
 
 invariant

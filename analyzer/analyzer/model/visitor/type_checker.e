@@ -84,6 +84,7 @@ feature
 					i := c.chain.count + 1 --skip the loop
 				else
 					current_class := program_access.get_class (class_name)
+					type := class_name
 					i := 2
 				end
 			end
@@ -104,6 +105,7 @@ feature
 						i := c.chain.count + 1 --skip the loop
 					else
 						current_class := program_access.get_class (class_name)
+						type := class_name
 					end
 				else
 					value := false
@@ -111,6 +113,12 @@ feature
 				end
 
 				i := i + 1
+			end
+
+			--if it is Result, and the routine is a query, override everything we have done
+			if c.chain.count = 1 and c.chain[1] ~ "Result" and c.get_ass.routine.type /~ "void" then
+				value := true
+				type := c.get_ass.routine.type --not void!!
 			end
 		end
 
@@ -178,6 +186,7 @@ feature --language clauses
 			value := true
 			create type_check.make
 			across p.classes is c loop
+				type_check.make
 				c.accept(type_check)
 				if not type_check.value then
 					value := false
@@ -198,6 +207,7 @@ feature --language clauses
 			--all attributes type correct, all routine type correct
 
 			across c.routines is r loop
+				type_check.make
 				r.accept(type_check)
 				if not type_check.value then
 					value := false
@@ -212,20 +222,31 @@ feature --language clauses
 			exp_check: TYPE_CHECKER
 		do
 			--todo: the expression is type correct and matches the type of name
+			value := false
+
 			create exp_check.make
-			check attached a.exp as e then
-				e.accept (exp_check)
+			if not a.null then
+				check attached a.exp as e then
+					e.accept (exp_check)
+				end
+				value := exp_check.value
 			end
 
 			--check parameter in routine and attribute in the corrsponding class
 			if program_access.contain_parameter(a.routine, a.name) then
 				type := program_access.get_parameter_type(a.routine, a.name)
-				value := exp_check.type ~ type
+				if not a.null then
+					value := exp_check.type ~ type and value
+				else
+					value := true
+				end
 			else if program_access.contain_attribute(a.routine.parent_class, a.name) then
 				type := program_access.get_attribute_type(a.routine.parent_class, a.name)
-				value := exp_check.type ~ type
-			else
-				value := false
+				if not a.null then
+					value := exp_check.type ~ type and value
+				else
+					value := true
+				end
 			end
 			end
 
@@ -262,6 +283,8 @@ feature {TYPE_CHECKER} --helper method
 			create printer.make
 			value := true
 			across r.assignments is ass loop
+				printer.make
+				ass_check.make
 				ass.accept(ass_check)
 				if not ass_check.value then
 					ass.accept(printer)

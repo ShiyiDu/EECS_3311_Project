@@ -17,7 +17,8 @@ create
 
 feature
 	name: STRING --name can be attribute in the class, parameter in the routine
-	exp: detachable EXPRESSION --name = NULL if it is void
+	null: BOOLEAN --is it null or is it being specified simply
+	exp: detachable EXPRESSION -- output ? if it is void
 	routine: CLASS_ROUTINE -- the parent routine this assignment is in
 
 feature
@@ -26,12 +27,17 @@ feature
 			name := new_name
 			exp := new_exp
 			routine := new_routine
+			null := false
 		end
 	accept(v:VISITOR)
 		do
 			v.visit_assignment (current)
 		end
-
+	set_null
+		do
+			null := true
+			exp := void
+		end
 	add_expression(expression: EXPRESSION)
 		require
 			can_be_filled: not expression_full

@@ -27,7 +27,12 @@ feature -- command
 			add_assignment_instruction_precond(cn, fn, n)
     	do
 			-- perform some update on the model state
-			model.add_assignment_instruction (cn, fn, n)
+			if pre_cond(cn, fn, n) then
+				model.add_assignment_instruction (cn, fn, n)
+			else
+				set_error
+			end
+
 			etf_cmd_container.on_change.notify ([Current])
     	end
 

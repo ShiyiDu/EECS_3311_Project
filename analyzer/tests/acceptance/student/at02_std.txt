@@ -46,3 +46,4 @@ add_call_chain(<<"no">>)
 type_check
 add_query("A", "get_c", <<>>, "B")
 generate_java_code
+add_call_chain(<<"haha">>)
