@@ -1,0 +1,29 @@
+../../../EIFGENs/analyzer/W_code/analyzer -b at14.txt at14.actual.txt
+../../../EIFGENs/analyzer/W_code/analyzer -b at13.txt at13.actual.txt
+../../../EIFGENs/analyzer/W_code/analyzer -b at12.txt at12.actual.txt
+../../../EIFGENs/analyzer/W_code/analyzer -b at11.txt at11.actual.txt
+../../../EIFGENs/analyzer/W_code/analyzer -b at10.txt at10.actual.txt
+../../../EIFGENs/analyzer/W_code/analyzer -b at09.txt at09.actual.txt
+../../../EIFGENs/analyzer/W_code/analyzer -b at08.txt at08.actual.txt
+../../../EIFGENs/analyzer/W_code/analyzer -b at07.txt at07.actual.txt
+../../../EIFGENs/analyzer/W_code/analyzer -b at06.txt at06.actual.txt
+../../../EIFGENs/analyzer/W_code/analyzer -b at05.txt at05.actual.txt
+../../../EIFGENs/analyzer/W_code/analyzer -b at04.txt at04.actual.txt
+../../../EIFGENs/analyzer/W_code/analyzer -b at03.txt at03.actual.txt
+../../../EIFGENs/analyzer/W_code/analyzer -b at02.txt at02.actual.txt
+../../../EIFGENs/analyzer/W_code/analyzer -b at01.txt at01.actual.txt
+
+diff at01.actual.txt at01.expected.txt
+diff at02.actual.txt at02.expected.txt
+diff at03.actual.txt at03.expected.txt
+diff at04.actual.txt at04.expected.txt
+diff at05.actual.txt at05.expected.txt
+diff at06.actual.txt at06.expected.txt
+diff at07.actual.txt at07.expected.txt
+diff at08.actual.txt at08.expected.txt
+diff at09.actual.txt at09.expected.txt
+diff at10.actual.txt at10.expected.txt
+diff at11.actual.txt at11.expected.txt
+diff at12.actual.txt at12.expected.txt
+diff at13.actual.txt at13.expected.txt
+diff at14.actual.txt at14.expected.txt
