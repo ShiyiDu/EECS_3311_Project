@@ -1,0 +1,272 @@
+greater_than
+add_query("A", "b", <<["e", "BOOLEAN"], ["A", "BOOLEAN"], ["c", "BOOLEAN"], ["e", "e"], ["a", "D"]>>, "A")
+add_attribute("d", "BOOLEAN", "BOOLEAN")
+bool_value (true)
+add_attribute("e", "B", "INTEGER")
+greater_than
+numerical_negation
+logical_negation
+logical_negation
+add_attribute("A", "C", "INTEGER")
+add_class(B)
+add_attribute("a", "b", "INTEGER")
+int_value (45)
+bool_value (false)
+add_call_chain(<<d,d>>)
+add_attribute("BOOLEAN", "B", "BOOLEAN")
+generate_java_code
+type_check
+add_class(D)
+type_check
+add_class(C)
+generate_java_code
+add_call_chain(<<D>>)
+add_call_chain(<<c,C,d,D,A,d,B,c>>)
+add_query("C", "C", <<["b", "INTEGER"], ["B", "d"], ["c", "b"], ["a", "BOOLEAN"], ["C", "BOOLEAN"], ["D", "BOOLEAN"], ["C", "INTEGER"], ["D", "e"]>>, "D")
+add_call_chain(<<d>>)
+add_class(D)
+add_query("A", "D", <<["D", "d"], ["b", "BOOLEAN"], ["a", "C"], ["c", "a"], ["c", "INTEGER"], ["a", "BOOLEAN"]>>, "c")
+add_call_chain(<<b,a,e,INTEGER,BOOLEAN,c,D,b>>)
+add_query("b", "C", <<["e", "e"], ["b", "D"], ["A", "BOOLEAN"]>>, "d")
+int_value (3)
+conjunction
+add_class(A)
+multiplication
+numerical_negation
+bool_value (true)
+int_value (40)
+bool_value (true)
+generate_java_code
+bool_value (true)
+quotient
+add_command("BOOLEAN", "a", <<["a", "B"], ["a", "INTEGER"], ["e", "INTEGER"], ["b", "INTEGER"], ["c", "BOOLEAN"], ["C", "BOOLEAN"], ["c", "INTEGER"], ["C", "INTEGER"]>>)
+numerical_negation
+add_query("C", "BOOLEAN", <<["e", "BOOLEAN"], ["B", "INTEGER"]>>, "C")
+bool_value (false)
+add_call_chain(<<e>>)
+add_query("B", "a", <<["INTEGER", "b"], ["BOOLEAN", "e"], ["b", "BOOLEAN"], ["d", "BOOLEAN"], ["A", "A"], ["c", "BOOLEAN"], ["B", "INTEGER"]>>, "B")
+add_query("INTEGER", "B", <<["b", "INTEGER"], ["c", "BOOLEAN"]>>, "a")
+add_attribute("c", "e", "BOOLEAN")
+generate_java_code
+type_check
+add_query("e", "e", <<["c", "INTEGER"], ["e", "BOOLEAN"], ["B", "INTEGER"]>>, "B")
+generate_java_code
+add_command("INTEGER", "a", <<["d", "A"], ["c", "INTEGER"], ["C", "INTEGER"], ["b", "c"]>>)
+numerical_negation
+logical_negation
+int_value (39)
+numerical_negation
+numerical_negation
+add_call_chain(<<B,D>>)
+disjunction
+add_attribute("c", "c", "INTEGER")
+add_attribute("B", "d", "INTEGER")
+bool_value (false)
+bool_value (false)
+int_value (35)
+add_call_chain(<<d,A>>)
+logical_negation
+numerical_negation
+int_value (10)
+add_query("a", "D", <<["C", "B"], ["INTEGER", "INTEGER"]>>, "B")
+numerical_negation
+conjunction
+add_call_chain(<<BOOLEAN,e>>)
+numerical_negation
+add_query("e", "B", <<["C", "BOOLEAN"], ["B", "b"], ["C", "INTEGER"], ["b", "INTEGER"], ["C", "D"], ["D", "D"], ["A", "INTEGER"]>>, "c")
+add_query("e", "b", <<["D", "INTEGER"], ["c", "b"]>>, "e")
+add_call_chain(<<a,e,c,c>>)
+int_value (1)
+int_value (8)
+add_class(c)
+generate_java_code
+add_query("c", "B", <<["D", "A"], ["a", "INTEGER"], ["A", "C"]>>, "D")
+add_command("b", "e", <<["a", "INTEGER"], ["d", "C"], ["d", "INTEGER"], ["B", "B"], ["BOOLEAN", "BOOLEAN"], ["e", "C"], ["c", "INTEGER"], ["INTEGER", "BOOLEAN"]>>)
+type_check
+add_call_chain(<<c,D,C,a,b,BOOLEAN,C,a>>)
+add_call_chain(<<e,D>>)
+add_query("BOOLEAN", "d", <<["b", "INTEGER"], ["A", "BOOLEAN"], ["c", "INTEGER"], ["A", "INTEGER"], ["b", "INTEGER"]>>, "b")
+add_command("d", "d", <<["D", "d"], ["d", "A"], ["e", "D"], ["e", "d"], ["BOOLEAN", "INTEGER"], ["e", "INTEGER"], ["C", "INTEGER"], ["d", "INTEGER"], ["c", "e"]>>)
+add_call_chain(<<e,b,B,a,D>>)
+add_call_chain(<<d,D>>)
+add_attribute("INTEGER", "c", "BOOLEAN")
+add_attribute("C", "A", "A")
+subtraction
+add_call_chain(<<d,d,A,C>>)
+conjunction
+add_command("C", "INTEGER", <<["D", "INTEGER"], ["c", "BOOLEAN"], ["BOOLEAN", "INTEGER"], ["c", "BOOLEAN"], ["d", "INTEGER"], ["b", "a"], ["c", "D"]>>)
+add_attribute("e", "b", "BOOLEAN")
+numerical_negation
+disjunction
+add_command("b", "e", <<["a", "BOOLEAN"]>>)
+bool_value (false)
+add_command("b", "D", <<["A", "BOOLEAN"], ["e", "BOOLEAN"]>>)
+add_query("B", "D", <<["BOOLEAN", "D"], ["D", "INTEGER"], ["C", "INTEGER"], ["a", "BOOLEAN"], ["d", "INTEGER"], ["B", "BOOLEAN"], ["A", "BOOLEAN"]>>, "A")
+generate_java_code
+add_call_chain(<<B,d,D,A,B,B,a,e,C>>)
+add_attribute("a", "e", "BOOLEAN")
+add_command("C", "C", <<["A", "BOOLEAN"], ["A", "BOOLEAN"], ["D", "INTEGER"]>>)
+add_query("B", "INTEGER", <<["D", "BOOLEAN"], ["C", "BOOLEAN"], ["INTEGER", "C"], ["BOOLEAN", "BOOLEAN"], ["D", "INTEGER"], ["b", "INTEGER"], ["c", "d"]>>, "C")
+bool_value (true)
+bool_value (false)
+add_call_chain(<<B,C,d>>)
+add_class(c)
+int_value (1)
+add_attribute("INTEGER", "A", "BOOLEAN")
+greater_than
+add_command("b", "C", <<["e", "BOOLEAN"], ["a", "INTEGER"], ["BOOLEAN", "d"], ["a", "BOOLEAN"], ["A", "BOOLEAN"], ["A", "d"], ["BOOLEAN", "INTEGER"], ["C", "BOOLEAN"], ["e", "BOOLEAN"]>>)
+add_call_chain(<<INTEGER,D,c,B,BOOLEAN,D,d,A,INTEGER>>)
+add_command("b", "C", <<["e", "e"], ["D", "A"], ["D", "INTEGER"], ["e", "INTEGER"], ["B", "INTEGER"], ["D", "INTEGER"], ["d", "BOOLEAN"]>>)
+type_check
+bool_value (false)
+add_attribute("A", "d", "INTEGER")
+add_attribute("c", "INTEGER", "INTEGER")
+add_call_chain(<<A,C,d,INTEGER,c,C,D,a,C>>)
+logical_negation
+add_query("B", "B", <<["INTEGER", "INTEGER"], ["d", "INTEGER"], ["D", "BOOLEAN"], ["C", "INTEGER"]>>, "C")
+int_value (15)
+add_query("b", "B", <<["INTEGER", "BOOLEAN"]>>, "INTEGER")
+logical_negation
+add_call_chain(<<A>>)
+disjunction
+logical_negation
+logical_negation
+add_call_chain(<<b,a,d>>)
+type_check
+add_attribute("b", "C", "D")
+less_than
+add_attribute("C", "d", "C")
+generate_java_code
+add_command("a", "e", <<["a", "INTEGER"], ["BOOLEAN", "BOOLEAN"], ["C", "D"], ["c", "INTEGER"], ["d", "BOOLEAN"], ["e", "INTEGER"], ["c", "d"], ["INTEGER", "A"]>>)
+int_value (6)
+generate_java_code
+add_command("a", "d", <<["d", "BOOLEAN"], ["c", "INTEGER"], ["B", "BOOLEAN"], ["d", "BOOLEAN"], ["d", "INTEGER"]>>)
+add_query("e", "A", <<["C", "INTEGER"]>>, "d")
+generate_java_code
+disjunction
+add_call_chain(<<INTEGER>>)
+numerical_negation
+add_command("C", "c", <<["D", "BOOLEAN"], ["D", "D"], ["B", "BOOLEAN"], ["c", "INTEGER"], ["C", "A"], ["A", "INTEGER"]>>)
+bool_value (true)
+logical_negation
+add_attribute("a", "c", "INTEGER")
+type_check
+numerical_negation
+add_call_chain(<<e,INTEGER,e,D,C>>)
+logical_negation
+int_value (10)
+add_attribute("a", "INTEGER", "B")
+int_value (23)
+int_value (40)
+add_class(BOOLEAN)
+add_class(d)
+add_call_chain(<<c,d,e,d,c,INTEGER>>)
+numerical_negation
+numerical_negation
+int_value (32)
+bool_value (true)
+add_call_chain(<<B,d>>)
+add_attribute("C", "c", "BOOLEAN")
+greater_than
+add_call_chain(<<C,d>>)
+conjunction
+add_call_chain(<<C,b,c>>)
+add_class(B)
+add_command("c", "a", <<["D", "A"], ["A", "INTEGER"], ["c", "INTEGER"], ["b", "a"], ["a", "b"], ["B", "BOOLEAN"], ["D", "c"]>>)
+int_value (18)
+add_class(c)
+numerical_negation
+add_call_chain(<<INTEGER,d,d,B,BOOLEAN,e,BOOLEAN,e>>)
+subtraction
+add_call_chain(<<A,c,INTEGER>>)
+subtraction
+int_value (2)
+add_call_chain(<<a,C,D,a,C,B,A,BOOLEAN,INTEGER>>)
+logical_negation
+add_command("C", "b", <<["INTEGER", "d"], ["e", "INTEGER"], ["D", "BOOLEAN"], ["b", "BOOLEAN"], ["A", "INTEGER"], ["A", "b"], ["C", "BOOLEAN"], ["b", "BOOLEAN"], ["D", "D"]>>)
+addition
+disjunction
+add_attribute("c", "c", "BOOLEAN")
+quotient
+bool_value (false)
+bool_value (false)
+add_call_chain(<<B,d>>)
+numerical_negation
+add_call_chain(<<D,INTEGER,d,b,a,a,b,D,B>>)
+add_command("c", "INTEGER", <<["e", "b"], ["C", "BOOLEAN"], ["c", "INTEGER"], ["BOOLEAN", "C"], ["e", "BOOLEAN"], ["INTEGER", "BOOLEAN"], ["e", "INTEGER"], ["a", "BOOLEAN"], ["b", "INTEGER"]>>)
+logical_negation
+addition
+add_query("B", "a", <<["A", "BOOLEAN"], ["B", "BOOLEAN"], ["a", "d"], ["a", "BOOLEAN"], ["b", "e"], ["BOOLEAN", "D"], ["b", "BOOLEAN"], ["C", "INTEGER"], ["INTEGER", "INTEGER"]>>, "d")
+add_command("a", "a", <<["BOOLEAN", "B"], ["c", "INTEGER"], ["e", "c"], ["INTEGER", "INTEGER"], ["D", "B"], ["B", "BOOLEAN"]>>)
+add_query("d", "d", <<["D", "INTEGER"], ["D", "INTEGER"], ["C", "B"]>>, "D")
+add_call_chain(<<BOOLEAN,d,c,INTEGER,b>>)
+bool_value (true)
+add_attribute("A", "INTEGER", "INTEGER")
+add_class(D)
+add_command("D", "b", <<["A", "BOOLEAN"], ["d", "BOOLEAN"], ["A", "b"], ["e", "A"], ["c", "B"], ["e", "B"], ["a", "BOOLEAN"]>>)
+add_attribute("D", "A", "BOOLEAN")
+logical_negation
+add_command("c", "b", <<["d", "INTEGER"], ["c", "d"], ["A", "BOOLEAN"]>>)
+add_query("A", "c", <<["D", "BOOLEAN"], ["D", "INTEGER"], ["e", "BOOLEAN"], ["A", "BOOLEAN"]>>, "D")
+disjunction
+add_attribute("A", "C", "BOOLEAN")
+add_call_chain(<<a,b,c,d,d,C,D,B>>)
+bool_value (false)
+bool_value (true)
+bool_value (true)
+add_attribute("B", "e", "BOOLEAN")
+int_value (11)
+bool_value (true)
+type_check
+int_value (9)
+int_value (21)
+add_attribute("A", "a", "BOOLEAN")
+greater_than
+logical_negation
+add_query("c", "A", <<["c", "BOOLEAN"], ["BOOLEAN", "e"], ["BOOLEAN", "B"]>>, "a")
+generate_java_code
+less_than
+add_command("d", "e", <<["A", "INTEGER"], ["C", "INTEGER"], ["d", "BOOLEAN"], ["d", "INTEGER"], ["A", "INTEGER"], ["BOOLEAN", "BOOLEAN"], ["B", "INTEGER"], ["A", "INTEGER"], ["B", "BOOLEAN"]>>)
+type_check
+add_query("C", "C", <<["e", "BOOLEAN"], ["B", "BOOLEAN"], ["c", "A"], ["B", "INTEGER"], ["d", "INTEGER"], ["d", "A"], ["d", "A"], ["d", "BOOLEAN"]>>, "d")
+add_command("BOOLEAN", "C", <<["C", "INTEGER"], ["B", "a"], ["D", "e"], ["A", "INTEGER"], ["C", "BOOLEAN"], ["INTEGER", "INTEGER"]>>)
+add_call_chain(<<d,D,e,A,c>>)
+int_value (33)
+add_query("b", "A", <<["c", "BOOLEAN"], ["a", "BOOLEAN"], ["B", "BOOLEAN"], ["c", "BOOLEAN"], ["d", "INTEGER"], ["C", "INTEGER"], ["INTEGER", "BOOLEAN"], ["d", "BOOLEAN"], ["b", "INTEGER"]>>, "e")
+logical_negation
+less_than
+conjunction
+logical_negation
+addition
+add_call_chain(<<B,D,C,B,INTEGER,D,B,b>>)
+add_attribute("e", "INTEGER", "c")
+add_attribute("INTEGER", "A", "INTEGER")
+add_command("d", "a", <<["BOOLEAN", "C"], ["d", "a"], ["A", "BOOLEAN"], ["a", "INTEGER"], ["B", "INTEGER"]>>)
+add_attribute("b", "INTEGER", "BOOLEAN")
+generate_java_code
+add_attribute("INTEGER", "a", "INTEGER")
+add_command("INTEGER", "d", <<["b", "INTEGER"], ["d", "BOOLEAN"], ["D", "INTEGER"], ["d", "BOOLEAN"]>>)
+int_value (42)
+add_call_chain(<<e,INTEGER,a,D,b,b,INTEGER,b>>)
+add_command("b", "a", <<["b", "INTEGER"], ["c", "BOOLEAN"], ["d", "INTEGER"], ["e", "b"]>>)
+add_call_chain(<<e>>)
+add_class(a)
+int_value (24)
+int_value (17)
+disjunction
+add_attribute("INTEGER", "C", "d")
+greater_than
+add_attribute("a", "c", "b")
+add_class(a)
+quotient
+equals
+add_attribute("B", "D", "INTEGER")
+add_call_chain(<<A,d,INTEGER,a,C,b,e,C>>)
+add_command("C", "e", <<["BOOLEAN", "INTEGER"], ["B", "BOOLEAN"], ["C", "C"], ["B", "INTEGER"]>>)
+add_command("c", "D", <<["a", "d"], ["e", "e"], ["D", "INTEGER"]>>)
+int_value (26)
+add_command("d", "b", <<["D", "INTEGER"], ["a", "INTEGER"], ["C", "INTEGER"], ["B", "A"], ["e", "INTEGER"]>>)
+add_class(e)
+add_command("d", "C", <<["b", "BOOLEAN"], ["D", "C"], ["A", "INTEGER"], ["d", "INTEGER"], ["e", "BOOLEAN"], ["INTEGER", "BOOLEAN"], ["D", "BOOLEAN"], ["A", "BOOLEAN"], ["C", "BOOLEAN"]>>)
+add_query("d", "b", <<["C", "BOOLEAN"], ["a", "INTEGER"], ["e", "BOOLEAN"]>>, "B")
+add_call_chain(<<b,BOOLEAN,A>>)
