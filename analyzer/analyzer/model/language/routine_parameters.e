@@ -86,7 +86,9 @@ feature
 				result.append (", ")
 			end
 
-			result.remove_tail (2);
+			if result.count > 1 then
+				result.remove_tail (2);
+			end
 			result.append (")")
 
 			if count = 0 then

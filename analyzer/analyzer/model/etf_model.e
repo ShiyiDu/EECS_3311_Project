@@ -331,7 +331,7 @@ feature -- queries
 				program.accept (type_checker)
 
 				Result.append (type_checker.error_msg)
-				Result.remove (1)
+				if not Result.is_empty then Result.remove (1) end
 				state := default_state
 			else
 

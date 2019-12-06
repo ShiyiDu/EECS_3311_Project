@@ -28,10 +28,10 @@ ignore_warnings = True
 is_expected = False
 
 # Specify where you put the oracle.
-oracle = "../oracle"
+oracle = "../oracle.dms"
 
 # Specify the path of the executable built from your project.
-executable = "../EIFGENs/analyzer/W_code/analyzer"
+executable = "../EIFGENs/analyzer/F_code/analyzer"
 # The above is an OSX executable
 # Linux executable for students shaler be called: oracle.exe
 

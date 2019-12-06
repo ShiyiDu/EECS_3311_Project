@@ -1,0 +1,6551 @@
+  Status: OK.
+  Number of classes being specified: 0
+->int_value(49)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 0
+->add_class("d")
+  Status: OK.
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->subtraction
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("C","b","e")
+  Status: Error (C is not an existing class name).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("A","A","B")
+  Status: Error (A is not an existing class name).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->type_check
+  class d is type-correct.
+->add_command("a","A",<<["e", "BOOLEAN"], ["c", "BOOLEAN"]>>)
+  Status: Error (a is not an existing class name).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(False)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->type_check
+  class d is type-correct.
+->bool_value(False)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->generate_java_code
+  class d {
+  }
+->int_value(35)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->numerical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_command("A","B",<<["d", "BOOLEAN"], ["d", "BOOLEAN"], ["c", "c"], ["D", "INTEGER"]>>)
+  Status: Error (A is not an existing class name).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->less_than
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"c", "c", "A", "D">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"A">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_query("e","B",<<["D", "BOOLEAN"], ["e", "INTEGER"], ["C", "A"], ["D", "INTEGER"], ["d", "d"]>>,"B")
+  Status: Error (e is not an existing class name).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->type_check
+  class d is type-correct.
+->equals
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"A", "a", "c">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"D", "a", "b", "C", "a">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->generate_java_code
+  class d {
+  }
+->add_assignment_instruction("c","b","e")
+  Status: Error (c is not an existing class name).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("b","INTEGER","A")
+  Status: Error (b is not an existing class name).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_query("BOOLEAN","b",<<["d", "BOOLEAN"], ["D", "INTEGER"], ["C", "A"], ["D", "BOOLEAN"], ["B", "BOOLEAN"]>>,"a")
+  Status: Error (BOOLEAN is not an existing class name).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->generate_java_code
+  class d {
+  }
+->bool_value(False)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->type_check
+  class d is type-correct.
+->logical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("BOOLEAN","c","a")
+  Status: Error (BOOLEAN is not an existing class name).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("D","BOOLEAN","b")
+  Status: Error (D is not an existing class name).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->logical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->numerical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->disjunction
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 1
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_class("INTEGER")
+  Status: OK.
+  Number of classes being specified: 2
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->less_than
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 2
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_class("B")
+  Status: OK.
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(False)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"a", "b", "C", "a", "C", "INTEGER", "A">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(True)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_attribute("b","B","B")
+  Status: Error (b is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->logical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_attribute("d","D","D")
+  Status: Error (Return type does not refer to a primitive type or an existing class: D).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(False)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_attribute("c","A","C")
+  Status: Error (c is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_command("D","C",<<["A", "BOOLEAN"], ["INTEGER", "BOOLEAN"], ["e", "BOOLEAN"], ["a", "BOOLEAN"], ["c", "BOOLEAN"], ["D", "INTEGER"]>>)
+  Status: Error (D is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->type_check
+  class d is type-correct.
+  class INTEGER is type-correct.
+  class B is type-correct.
+->type_check
+  class d is type-correct.
+  class INTEGER is type-correct.
+  class B is type-correct.
+->bool_value(False)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"c", "a", "C", "C", "D", "BOOLEAN", "A", "c", "A">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->type_check
+  class d is type-correct.
+  class INTEGER is type-correct.
+  class B is type-correct.
+->add_command("INTEGER","A",<<["A", "BOOLEAN"], ["b", "C"], ["A", "INTEGER"], ["e", "A"], ["D", "INTEGER"], ["C", "INTEGER"]>>)
+  Status: Error (Duplicated parameter names: A).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->int_value(17)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->type_check
+  class d is type-correct.
+  class INTEGER is type-correct.
+  class B is type-correct.
+->int_value(37)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->generate_java_code
+  class d {
+  }
+  class INTEGER {
+  }
+  class B {
+  }
+->add_query("A","D",<<["C", "BOOLEAN"], ["D", "e"], ["b", "BOOLEAN"], ["INTEGER", "e"], ["C", "INTEGER"]>>,"e")
+  Status: Error (A is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_attribute("A","C","A")
+  Status: Error (A is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_attribute("D","BOOLEAN","INTEGER")
+  Status: Error (D is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_query("d","D",<<["a", "INTEGER"], ["c", "B"], ["A", "BOOLEAN"], ["C", "C"], ["A", "BOOLEAN"], ["A", "INTEGER"], ["B", "e"], ["a", "INTEGER"]>>,"BOOLEAN")
+  Status: Error (Parameter names clash with existing classes: B).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_query("B","a",<<["C", "D"], ["B", "INTEGER"], ["BOOLEAN", "INTEGER"], ["A", "c"], ["d", "INTEGER"], ["C", "A"], ["B", "INTEGER"], ["c", "INTEGER"]>>,"D")
+  Status: Error (Parameter names clash with existing classes: B, BOOLEAN, d, B).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("D","A","A")
+  Status: Error (D is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("c","e","D")
+  Status: Error (c is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->conjunction
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(False)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_attribute("D","B","INTEGER")
+  Status: Error (D is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_attribute("A","d","BOOLEAN")
+  Status: Error (A is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"C", "BOOLEAN">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"e", "d", "C", "C">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->logical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->int_value(10)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->numerical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->modulo
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("D","A","C")
+  Status: Error (D is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->multiplication
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_class("INTEGER")
+  Status: Error (INTEGER is already an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_query("d","D",<<["C", "BOOLEAN"], ["a", "INTEGER"], ["e", "BOOLEAN"], ["e", "INTEGER"], ["C", "BOOLEAN"], ["a", "BOOLEAN"], ["e", "INTEGER"], ["D", "BOOLEAN"]>>,"C")
+  Status: Error (Duplicated parameter names: e, C, a).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"a">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(False)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->logical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->int_value(12)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"e", "D", "B", "b">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->modulo
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->generate_java_code
+  class d {
+  }
+  class INTEGER {
+  }
+  class B {
+  }
+->add_query("c","B",<<["INTEGER", "BOOLEAN"], ["d", "b"], ["d", "INTEGER"], ["D", "INTEGER"], ["b", "INTEGER"], ["c", "B"], ["d", "INTEGER"]>>,"C")
+  Status: Error (c is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->int_value(27)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_command("e","a",<<["c", "INTEGER"], ["c", "INTEGER"], ["A", "BOOLEAN"], ["C", "INTEGER"], ["A", "INTEGER"], ["B", "D"], ["b", "A"], ["B", "BOOLEAN"], ["C", "INTEGER"]>>)
+  Status: Error (e is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_query("BOOLEAN","B",<<["A", "INTEGER"]>>,"e")
+  Status: Error (BOOLEAN is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->numerical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_query("a","A",<<["a", "BOOLEAN"], ["e", "BOOLEAN"], ["b", "A"], ["C", "A"], ["A", "D"], ["c", "INTEGER"], ["a", "D"], ["A", "INTEGER"], ["e", "BOOLEAN"]>>,"b")
+  Status: Error (a is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_command("d","BOOLEAN",<<["B", "C"]>>)
+  Status: Error (Parameter names clash with existing classes: B).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(True)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_attribute("c","b","INTEGER")
+  Status: Error (c is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->int_value(17)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("D","C","C")
+  Status: Error (D is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->disjunction
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->numerical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_command("D","C",<<["D", "B"], ["D", "BOOLEAN"], ["d", "BOOLEAN"], ["d", "INTEGER"], ["A", "BOOLEAN"]>>)
+  Status: Error (D is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->less_than
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"A", "B">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"d", "A", "a", "B", "B", "a", "A", "D">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_command("C","BOOLEAN",<<["A", "D"], ["c", "b"], ["C", "e"], ["A", "D"], ["INTEGER", "INTEGER"], ["C", "BOOLEAN"], ["a", "INTEGER"]>>)
+  Status: Error (C is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(False)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"C">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"B", "B", "B", "B">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->numerical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_attribute("D","B","B")
+  Status: Error (D is not an existing class name).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"B", "A">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->less_than
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->type_check
+  class d is type-correct.
+  class INTEGER is type-correct.
+  class B is type-correct.
+->add_call_chain(<<"B", "e", "C", "B">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 3
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_class("e")
+  Status: OK.
+  Number of classes being specified: 4
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->multiplication
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 4
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_class("C")
+  Status: OK.
+  Number of classes being specified: 5
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_class("BOOLEAN")
+  Status: OK.
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_command("d","d",<<["a", "BOOLEAN"], ["e", "a"], ["b", "BOOLEAN"], ["D", "BOOLEAN"], ["BOOLEAN", "BOOLEAN"]>>)
+  Status: Error (Parameter names clash with existing classes: e, BOOLEAN).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->generate_java_code
+  class d {
+  }
+  class INTEGER {
+  }
+  class B {
+  }
+  class e {
+  }
+  class C {
+  }
+  class BOOLEAN {
+  }
+->generate_java_code
+  class d {
+  }
+  class INTEGER {
+  }
+  class B {
+  }
+  class e {
+  }
+  class C {
+  }
+  class BOOLEAN {
+  }
+->add_assignment_instruction("B","D","a")
+  Status: Error (D is not an existing feature name in class B).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_query("D","D",<<["d", "BOOLEAN"], ["D", "BOOLEAN"], ["B", "C"], ["B", "BOOLEAN"], ["C", "INTEGER"], ["C", "c"], ["C", "INTEGER"], ["C", "INTEGER"]>>,"D")
+  Status: Error (D is not an existing class name).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->conjunction
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->logical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_command("d","e",<<["A", "A"], ["b", "BOOLEAN"], ["d", "BOOLEAN"]>>)
+  Status: Error (Parameter names clash with existing classes: d).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"B">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_attribute("A","a","BOOLEAN")
+  Status: Error (A is not an existing class name).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->generate_java_code
+  class d {
+  }
+  class INTEGER {
+  }
+  class B {
+  }
+  class e {
+  }
+  class C {
+  }
+  class BOOLEAN {
+  }
+->numerical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_command("C","C",<<["C", "INTEGER"]>>)
+  Status: Error (Parameter names clash with existing classes: C).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->int_value(5)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->numerical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(True)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->generate_java_code
+  class d {
+  }
+  class INTEGER {
+  }
+  class B {
+  }
+  class e {
+  }
+  class C {
+  }
+  class BOOLEAN {
+  }
+->add_call_chain(<<"B", "d", "C", "b">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->less_than
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->int_value(23)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"b", "b">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->generate_java_code
+  class d {
+  }
+  class INTEGER {
+  }
+  class B {
+  }
+  class e {
+  }
+  class C {
+  }
+  class BOOLEAN {
+  }
+->add_class("e")
+  Status: Error (e is already an existing class name).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_query("C","A",<<["d", "BOOLEAN"], ["c", "BOOLEAN"]>>,"a")
+  Status: Error (Parameter names clash with existing classes: d).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->type_check
+  class d is type-correct.
+  class INTEGER is type-correct.
+  class B is type-correct.
+  class e is type-correct.
+  class C is type-correct.
+  class BOOLEAN is type-correct.
+->add_query("A","C",<<["D", "b"]>>,"e")
+  Status: Error (A is not an existing class name).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"e", "A">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(True)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_query("INTEGER","B",<<["A", "INTEGER"], ["e", "BOOLEAN"], ["a", "BOOLEAN"], ["BOOLEAN", "b"], ["e", "INTEGER"]>>,"c")
+  Status: Error (Parameter names clash with existing classes: e, BOOLEAN, e).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->numerical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_command("D","INTEGER",<<["C", "B"], ["A", "BOOLEAN"], ["A", "BOOLEAN"], ["C", "INTEGER"], ["b", "BOOLEAN"], ["C", "BOOLEAN"]>>)
+  Status: Error (D is not an existing class name).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("a","d","B")
+  Status: Error (a is not an existing class name).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("B","D","d")
+  Status: Error (D is not an existing feature name in class B).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->generate_java_code
+  class d {
+  }
+  class INTEGER {
+  }
+  class B {
+  }
+  class e {
+  }
+  class C {
+  }
+  class BOOLEAN {
+  }
+->add_query("A","INTEGER",<<["c", "BOOLEAN"], ["b", "D"]>>,"B")
+  Status: Error (A is not an existing class name).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->int_value(28)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->int_value(41)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->type_check
+  class d is type-correct.
+  class INTEGER is type-correct.
+  class B is type-correct.
+  class e is type-correct.
+  class C is type-correct.
+  class BOOLEAN is type-correct.
+->logical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->modulo
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->generate_java_code
+  class d {
+  }
+  class INTEGER {
+  }
+  class B {
+  }
+  class e {
+  }
+  class C {
+  }
+  class BOOLEAN {
+  }
+->equals
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->addition
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->int_value(9)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"C">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_query("d","A",<<["b", "INTEGER"], ["c", "INTEGER"], ["B", "a"]>>,"A")
+  Status: Error (Parameter names clash with existing classes: B).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(False)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(True)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 6
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_class("a")
+  Status: OK.
+  Number of classes being specified: 7
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"A", "e", "D", "c", "C", "A", "c">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 7
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->generate_java_code
+  class d {
+  }
+  class INTEGER {
+  }
+  class B {
+  }
+  class e {
+  }
+  class C {
+  }
+  class BOOLEAN {
+  }
+  class a {
+  }
+->add_assignment_instruction("B","D","C")
+  Status: Error (D is not an existing feature name in class B).
+  Number of classes being specified: 7
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("BOOLEAN","D","D")
+  Status: Error (D is not an existing feature name in class BOOLEAN).
+  Number of classes being specified: 7
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"A", "a", "c", "a", "B", "BOOLEAN">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 7
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->addition
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 7
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"D", "B", "c", "A">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 7
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"c", "B", "A", "A", "e">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 7
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->less_than
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 7
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->int_value(3)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 7
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_attribute("c","b","BOOLEAN")
+  Status: Error (c is not an existing class name).
+  Number of classes being specified: 7
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->numerical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 7
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(False)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 7
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_class("b")
+  Status: OK.
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->disjunction
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->disjunction
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_command("BOOLEAN","a",<<["a", "INTEGER"], ["A", "INTEGER"]>>)
+  Status: Error (Parameter names clash with existing classes: a).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("C","d","D")
+  Status: Error (d is not an existing feature name in class C).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("b","a","d")
+  Status: Error (a is not an existing feature name in class b).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(True)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->disjunction
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_query("INTEGER","c",<<["D", "BOOLEAN"], ["c", "b"], ["C", "INTEGER"], ["d", "D"], ["D", "BOOLEAN"]>>,"B")
+  Status: Error (Parameter names clash with existing classes: C, d).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"B", "C">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("a","B","a")
+  Status: Error (B is not an existing feature name in class a).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("e","INTEGER","e")
+  Status: Error (INTEGER is not an existing feature name in class e).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->quotient
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_command("d","c",<<["c", "INTEGER"]>>)
+  Status: OK.
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"A", "BOOLEAN", "c", "c">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->logical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_query("INTEGER","c",<<["e", "c"], ["D", "INTEGER"], ["d", "INTEGER"], ["b", "BOOLEAN"], ["BOOLEAN", "C"], ["D", "BOOLEAN"]>>,"INTEGER")
+  Status: Error (Parameter names clash with existing classes: e, d, b, BOOLEAN).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"a", "a", "D">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->type_check
+  class d is type-correct.
+  class INTEGER is type-correct.
+  class B is type-correct.
+  class e is type-correct.
+  class C is type-correct.
+  class BOOLEAN is type-correct.
+  class a is type-correct.
+  class b is type-correct.
+->add_call_chain(<<"c", "D">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"BOOLEAN">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->int_value(28)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->conjunction
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("D","b","A")
+  Status: Error (D is not an existing class name).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("D","A","c")
+  Status: Error (D is not an existing class name).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->logical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"d", "b", "INTEGER", "d", "d", "b", "BOOLEAN">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"b", "e", "c", "c", "a">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->numerical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->numerical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->int_value(3)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("e","B","e")
+  Status: Error (B is not an existing feature name in class e).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("d","D","B")
+  Status: Error (D is not an existing feature name in class d).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->int_value(38)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->greater_than
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->numerical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"A", "a", "D", "d", "C", "c">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->conjunction
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->type_check
+  class d is type-correct.
+  class INTEGER is type-correct.
+  class B is type-correct.
+  class e is type-correct.
+  class C is type-correct.
+  class BOOLEAN is type-correct.
+  class a is type-correct.
+  class b is type-correct.
+->equals
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_attribute("c","B","INTEGER")
+  Status: Error (c is not an existing class name).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(True)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("c","d","c")
+  Status: Error (c is not an existing class name).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("a","C","D")
+  Status: Error (C is not an existing feature name in class a).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->numerical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->addition
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->multiplication
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_command("a","C",<<["D", "INTEGER"], ["D", "B"]>>)
+  Status: Error (Duplicated parameter names: D).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_attribute("d","b","INTEGER")
+  Status: OK.
+  Number of classes being specified: 8
+    d
+      Number of attributes: 1
+        + b: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->int_value(20)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 1
+        + b: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_query("e","B",<<["d", "INTEGER"], ["b", "BOOLEAN"], ["D", "INTEGER"], ["c", "BOOLEAN"], ["c", "INTEGER"], ["B", "BOOLEAN"], ["A", "C"]>>,"c")
+  Status: Error (Parameter names clash with existing classes: d, b, B).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 1
+        + b: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->generate_java_code
+  class d {
+    void c(int c) {
+    }
+    int b;
+  }
+  class INTEGER {
+  }
+  class B {
+  }
+  class e {
+  }
+  class C {
+  }
+  class BOOLEAN {
+  }
+  class a {
+  }
+  class b {
+  }
+->add_command("e","c",<<["BOOLEAN", "e"], ["c", "BOOLEAN"], ["e", "BOOLEAN"], ["D", "INTEGER"], ["d", "BOOLEAN"]>>)
+  Status: Error (Parameter names clash with existing classes: BOOLEAN, e, d).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 1
+        + b: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->generate_java_code
+  class d {
+    void c(int c) {
+    }
+    int b;
+  }
+  class INTEGER {
+  }
+  class B {
+  }
+  class e {
+  }
+  class C {
+  }
+  class BOOLEAN {
+  }
+  class a {
+  }
+  class b {
+  }
+->add_command("a","c",<<["e", "INTEGER"], ["A", "c"], ["BOOLEAN", "INTEGER"], ["C", "BOOLEAN"], ["B", "INTEGER"], ["C", "INTEGER"]>>)
+  Status: Error (Parameter names clash with existing classes: e, BOOLEAN, C, B, C).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 1
+        + b: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->int_value(21)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 1
+        + b: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"d", "A", "B", "e", "C", "d">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 1
+        + b: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_class("C")
+  Status: Error (C is already an existing class name).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 1
+        + b: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_attribute("a","C","BOOLEAN")
+  Status: OK.
+  Number of classes being specified: 8
+    d
+      Number of attributes: 1
+        + b: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"e", "B", "B", "A", "C", "INTEGER">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 1
+        + b: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(False)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 1
+        + b: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_command("B","a",<<["c", "C"], ["BOOLEAN", "INTEGER"]>>)
+  Status: Error (Parameter names clash with existing classes: BOOLEAN).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 1
+        + b: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(True)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 1
+        + b: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->disjunction
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 1
+        + b: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(False)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 1
+        + b: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_attribute("d","d","INTEGER")
+  Status: OK.
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_query("C","e",<<["B", "BOOLEAN"], ["a", "e"], ["INTEGER", "C"], ["A", "INTEGER"], ["b", "INTEGER"], ["A", "INTEGER"], ["B", "BOOLEAN"], ["A", "a"], ["B", "b"]>>,"D")
+  Status: Error (Parameter names clash with existing classes: B, a, INTEGER, b, B, B).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_attribute("D","e","INTEGER")
+  Status: Error (D is not an existing class name).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_command("C","C",<<["c", "BOOLEAN"], ["B", "c"], ["C", "INTEGER"], ["D", "INTEGER"], ["d", "A"], ["c", "INTEGER"]>>)
+  Status: Error (Parameter names clash with existing classes: B, C, d).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("c","b","b")
+  Status: Error (c is not an existing class name).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("d","c","b")
+  Status: OK.
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+  Routine currently being implemented: {d}.c
+  Assignment being specified: b := ?
+->numerical_negation
+  Status: OK.
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+  Routine currently being implemented: {d}.c
+  Assignment being specified: b := (- ?)
+->add_query("c","B",<<["C", "d"], ["d", "INTEGER"], ["a", "D"], ["B", "INTEGER"]>>,"e")
+  Status: Error (An assignment instruction is currently being specified for routine c in class d).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+  Routine currently being implemented: {d}.c
+  Assignment being specified: b := (- ?)
+->numerical_negation
+  Status: OK.
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+  Routine currently being implemented: {d}.c
+  Assignment being specified: b := (- (- ?))
+->add_command("INTEGER","INTEGER",<<["c", "D"], ["b", "INTEGER"], ["INTEGER", "INTEGER"], ["B", "BOOLEAN"]>>)
+  Status: Error (An assignment instruction is currently being specified for routine c in class d).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+  Routine currently being implemented: {d}.c
+  Assignment being specified: b := (- (- ?))
+->numerical_negation
+  Status: OK.
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+  Routine currently being implemented: {d}.c
+  Assignment being specified: b := (- (- (- ?)))
+->equals
+  Status: OK.
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+  Routine currently being implemented: {d}.c
+  Assignment being specified: b := (- (- (- (? == nil))))
+->bool_value(False)
+  Status: OK.
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+  Routine currently being implemented: {d}.c
+  Assignment being specified: b := (- (- (- (False == ?))))
+->add_call_chain(<<"B", "BOOLEAN", "c", "INTEGER", "INTEGER", "INTEGER", "INTEGER", "b">>)
+  Status: OK.
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->generate_java_code
+  class d {
+    void c(int c) {
+      b = (- (- (- (False == B.BOOLEAN.c.INTEGER.INTEGER.INTEGER.INTEGER.b))));
+    }
+    int b;
+    int d;
+  }
+  class INTEGER {
+  }
+  class B {
+  }
+  class e {
+  }
+  class C {
+  }
+  class BOOLEAN {
+  }
+  class a {
+    bool C;
+  }
+  class b {
+  }
+->generate_java_code
+  class d {
+    void c(int c) {
+      b = (- (- (- (False == B.BOOLEAN.c.INTEGER.INTEGER.INTEGER.INTEGER.b))));
+    }
+    int b;
+    int d;
+  }
+  class INTEGER {
+  }
+  class B {
+  }
+  class e {
+  }
+  class C {
+  }
+  class BOOLEAN {
+  }
+  class a {
+    bool C;
+  }
+  class b {
+  }
+->int_value(11)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->generate_java_code
+  class d {
+    void c(int c) {
+      b = (- (- (- (False == B.BOOLEAN.c.INTEGER.INTEGER.INTEGER.INTEGER.b))));
+    }
+    int b;
+    int d;
+  }
+  class INTEGER {
+  }
+  class B {
+  }
+  class e {
+  }
+  class C {
+  }
+  class BOOLEAN {
+  }
+  class a {
+    bool C;
+  }
+  class b {
+  }
+->bool_value(True)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->int_value(28)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"D", "b", "BOOLEAN", "B", "e", "D", "a", "B">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("A","a","b")
+  Status: Error (A is not an existing class name).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_assignment_instruction("a","B","A")
+  Status: Error (B is not an existing feature name in class a).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"d", "c", "D", "e", "B", "b", "b", "b", "C">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->type_check
+  class d is not type-correct:
+    b = (- (- (- (False == B.BOOLEAN.c.INTEGER.INTEGER.INTEGER.INTEGER.b)))) in routine c is not type-correct.
+  class INTEGER is type-correct.
+  class B is type-correct.
+  class e is type-correct.
+  class C is type-correct.
+  class BOOLEAN is type-correct.
+  class a is type-correct.
+  class b is type-correct.
+->multiplication
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->generate_java_code
+  class d {
+    void c(int c) {
+      b = (- (- (- (False == B.BOOLEAN.c.INTEGER.INTEGER.INTEGER.INTEGER.b))));
+    }
+    int b;
+    int d;
+  }
+  class INTEGER {
+  }
+  class B {
+  }
+  class e {
+  }
+  class C {
+  }
+  class BOOLEAN {
+  }
+  class a {
+    bool C;
+  }
+  class b {
+  }
+->logical_negation
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"B">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_command("a","A",<<["D", "INTEGER"], ["a", "c"], ["A", "BOOLEAN"]>>)
+  Status: Error (Parameter names clash with existing classes: a).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_attribute("A","C","INTEGER")
+  Status: Error (A is not an existing class name).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->addition
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"d", "b">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->type_check
+  class d is not type-correct:
+    b = (- (- (- (False == B.BOOLEAN.c.INTEGER.INTEGER.INTEGER.INTEGER.b)))) in routine c is not type-correct.
+  class INTEGER is type-correct.
+  class B is type-correct.
+  class e is type-correct.
+  class C is type-correct.
+  class BOOLEAN is type-correct.
+  class a is type-correct.
+  class b is type-correct.
+->equals
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->add_call_chain(<<"C", "B", "C", "BOOLEAN">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+->bool_value(False)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 8
+    d
+      Number of attributes: 2
+        + b: INTEGER
+        + d: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + c(INTEGER)
+    INTEGER
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    e
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    C
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    BOOLEAN
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    a
+      Number of attributes: 1
+        + C: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
+    b
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0

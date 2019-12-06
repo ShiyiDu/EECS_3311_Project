@@ -53,7 +53,7 @@ feature
 
 			u.exp_instance.accept(checker)
 			if type ~ checker.type then
-				value := true
+				value := true and checker.value
 			else
 				value := false
 			end
@@ -142,24 +142,27 @@ feature
 			visit_binary(d, "INTEGER")
 		end
 
-	visit_equal(e: BINARY_EQUAL)
-		do
-			visit_binary(e, "INTEGER")
-		end
-
 	visit_modulo(m: BINARY_MOD)
 		do
 			visit_binary(m, "INTEGER")
 		end
 
+	visit_equal(e: BINARY_EQUAL)
+		do
+			visit_binary(e, "INTEGER")
+			type := "BOOLEAN"
+		end
+
 	visit_greater(g: BINARY_GREATER)
 		do
 			visit_binary(g, "INTEGER")
+			type := "BOOLEAN"
 		end
 
 	visit_smaller(s: BINARY_SMALLER)
 		do
 			visit_binary(s, "INTEGER")
+			type := "BOOLEAN"
 		end
 ----------------------------------------- changes --------------------------------------	
 	visit_and(a: BINARY_AND)
@@ -313,7 +316,7 @@ feature {TYPE_CHECKER} --helper method
 				end
 			end
 
-			value := (left.type ~ t) and (right.type ~ t)
+			value := (left.type ~ t) and (right.type ~ t) and left.value and right.value
 			type := t
 		end
 

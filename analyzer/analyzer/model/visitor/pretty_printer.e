@@ -264,7 +264,9 @@ feature -- for language clauses
 			loop
 				q.assignments[i].accept(pretty_print)
 				if i ~ 1 then
-					pretty_print.print_result.remove_head (6)
+					if pretty_print.print_result.count > 5 then
+						pretty_print.print_result.remove_head (6)
+					end
 					print_result.append("%N      " + out_type(q.type) + " " + pretty_print.print_result)
 				else
 					print_result.append("%N" + pretty_print.print_result)

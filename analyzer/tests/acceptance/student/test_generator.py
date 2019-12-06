@@ -12,9 +12,9 @@ def call_chain():
 	num = random.randrange(1, 10)
 	result = "add_call_chain(<<"
 	for i in range(1, num, 1):
-		result = result + (rand_name() + ",")
+		result = result + (to_string(rand_name()) + ",")
 	
-	result = result + (rand_name() + ">>)\n")
+	result = result + (to_string(rand_name()) + ">>)\n")
 	return result
 
 def binary_op():
@@ -68,7 +68,7 @@ def garbage_command():
 def rand_command():
 	type_check = "type_check"
 	generate_code = "generate_java_code"
-	add_class = "add_class(" + rand_name() + ")"
+	add_class = "add_class(" + to_string(rand_name()) + ")"
 	add_attribute = "add_attribute(" + to_string(rand_name()) + ", " + to_string(rand_name()) + ", " + to_string(rand_type()) + ")"
 	add_command = "add_command(" + to_string(rand_name()) + ", " + to_string(rand_name()) + ", " + parameter() + ")"
 	add_query = "add_query(" + to_string(rand_name()) + ", " + to_string(rand_name()) + ", " + parameter() + ", " + to_string(rand_name()) + ")"
@@ -77,7 +77,11 @@ def rand_command():
 def ass_instruc():
 	op_amount = random.randrange(1, 6)
 	const_amount = random.randrange(op_amount, op_amount * 2)
-	result = ""
+	result = "add_assignment_instruction (" + to_string(rand_name()) + ", " + to_string(rand_name()) + ", " + to_string(rand_name()) + ")\n"
+	dice = random.randrange(0, 3)
+	if dice > 0:
+		result = result + "add_assignment_instruction (" + to_string(rand_name()) + ", " + to_string(rand_name()) + ", " + to_string(rand_name()) + ")\n"
+	
 	while op_amount > 0 or const_amount > 0:
 		dice = random.randrange(0, 3)
 		if dice == 0: # const
@@ -120,12 +124,15 @@ def generate_command(amount):
 #print(array_str([tuple_str(integer, boolean)]))
 #print(tuple_str("INTEGER", "INTEGER"))
 
+#print(ass_instruc())
+#print(rand_command())
+#print(garbage_command())
 
 def generate_file(index, amount):
-	file_name = "test" + str(index) + ".txt"
+	file_name = "at" + str(index) + ".txt"
 	f = open(file_name, "w+")
 	f.write(generate_command(amount))
 	f.close
 	
-for i in range(1, 1000):
+for i in range(1, 20):
 	generate_file(i, 200)
